@@ -1,0 +1,30 @@
+\ifglsentryexists{UPOL}{}%
+{%
+\gls@defglossaryentry{UPOL}%
+{%
+name={UPOL},%
+sort={UPOL},%
+type={acronym},%
+first={Univerzita Palack\'eho v~Olomouci\glsspace (UPOL)},%
+firstplural={Univerzita Palack\'eho v~Olomoucis\glsspace (UPOLs)},%
+text={UPOL},%
+plural={UPOLs},%
+description={Univerzita Palack\'eho v~Olomouci},%
+descriptionplural={Univerzita Palack\'eho v~Olomoucis},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Univerzita Palack\'eho v~Olomouci},%
+longplural={Univerzita Palack\'eho v~Olomoucis},%
+short={UPOL},%
+shortplural={UPOLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
