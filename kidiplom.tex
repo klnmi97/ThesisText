@@ -124,14 +124,19 @@
 
 \newcommand{\BibLaTeX}{\textsc{Bib}\LaTeX}
 
-\noindent\textcolor{red}{\LARGE Upozornění: Následující text
-  dokumentace stylu, vyjma přílohy~\ref{sec:ObsahCD}, je rozpracovaná
-  a (značně) neúplná verze!!!}
+%\noindent\textcolor{red}{\LARGE Upozornění: Následující text
+%  dokumentace stylu, vyjma přílohy~\ref{sec:ObsahCD}, je rozpracovaná
+%  a (značně) neúplná verze!!!}
 
-\section{Styly pro psaní bakalářských a diplomových prací}
-Toto jsou styly pro psaní bakalářských a diplomových prací přes typografický systém \LaTeX{}, tedy \textbf{kistyles}.
+\section{Introduction}
 
-\subsection{Požadavky a podprovaná prostředí}
+Nowadays sorting algorithms are widely used. For example if you open file explorer on your PC, you may see files sorted in different ways. Students of computer science start learning simplest algorithms in the first year of studies and sorting algorithms are among them.
+
+The main goal of the thesis was to create a program which would serve as a tool for understanding how main sorting algorithms work.
+
+\subsection{Usage of sorting algorithms?}
+
+\subsection{Visual solution}
 Sada balíku \textbf{kistyles} podporuje následující distribuce systému \LaTeX{}:
 \begin{itemize}
 \item \TeX{} Live.
@@ -240,7 +245,7 @@ biblatex & true & Zapne sazbu bibliografie přes balík \BibLaTeX{}.
 \subsection{Geometrie stránky}
 Tento styl používá list velikosti $A4$. Pro sazbu prací je třeba použít jednostrannou sazbu. Levý okraj je rozšířen s ohledem na vazbu výsledné knižní podoby práce.
 
-\section{Sazba částí dokumentu}
+\section{Algorithms}
 \subsection{Sazba úvodní strany či obsahu}
 Vysázení všech podstatných částí úvodu práce obstará makro \kiinlinecode{TeX}{!}{\\maketitle}. Pro správné vysázení všech částí a meta-informací je potřeba použí makra \kiinlinecode{TeX}{!}{\\title}, \kiinlinecode{TeX}{!}{\\author} a další. Jejich přehled lze najít ve zdrojovém souboru tohoto dokumentu. V případě použítí \textbf{pdf} výstupu se generuje i dodatečná hlavička souboru s meta-informacemi jako je autor dokumentu, název práce či dalšími.
 
@@ -404,6 +409,10 @@ SELECT * FROM table_1; /* komentar */
 \begin{kicode}{TutorialD}{}{TutorialD}
 table_1 AND table_2;
 \end{kicode}
+
+\section{Documentation}
+
+\section{User Guide}
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
 %% nastavený jazyk práce (nepovinným parametrem language makra
