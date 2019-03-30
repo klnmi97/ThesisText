@@ -171,11 +171,18 @@ Insertion sorting algorithm has a simple idea. Assume the items to be sorted. We
 
 Selection Sort is based on the repeated selection. As well as in the Insertion Sort, here we have sorted part and unsorted part.
 
-Assume the array of items. At the beginning of the sorting process unsorted part is represented by the whole array. Then the first item of the unsorted part is set as the smallest key and is compared with the follow-up elements. When smaller item is found, it is set as a new smallest key. After the end of the array is reached the smallest item is swapped with the first unsorted  element and it becomes the sorted part of the array. This step is repeated till the array is sorted.
+Assume an array of items. At the beginning of sorting process unsorted part is represented by the whole array. Then the first item of the unsorted part is set as the smallest key and is compared with the follow-up elements. When smaller item is found, it is set as a new smallest key. After the end of the array is reached the smallest item is swapped with the first unsorted  element and it becomes the sorted part of the array. This step is repeated till the array is sorted.
 
 \subsection{Bubble Sort}
 
-\subsubsection{Cocktail Sort}
+At the base of the Bubble Sort lies the idea of exchanging two adjacent elements if they are in wrong order. Algorithm works stepping through the all elements so the largest element tends to move to the right.
+
+Now we are going to the details. Let us have an array to sort. As it was already mentioned that for ascending order largest element "bubbles" to the top. This way after the first iteration largest item moves up to the $n$-th position, where $n$ is number of elements. 
+
+Repeating this step we receive each element into its right position.
+
+%add pic of bubblesort in action
+\subsection{Cocktail Sort}
 
 \subsection{Quick Sort}
 
