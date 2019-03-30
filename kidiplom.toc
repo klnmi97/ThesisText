@@ -13,40 +13,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Algorithms}{1}{section.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Sazba \IeC {\'u}vodn\IeC {\'\i } strany \IeC {\v c}i obsahu}{1}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.1}Insertion Sort}{1}{subsection.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Z\IeC {\'a}v\IeC {\v e}ry}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.2}Selection Sort}{1}{subsection.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Matematika}{3}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.3}Bubble Sort}{2}{subsection.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Sazba literatury}{4}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Cocktail Sort}{2}{subsubsection.2.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.1}Sazba bibliografie p\IeC {\v r}es \textsc {Bib}\LaTeX {}}{4}{subsubsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4}Quick Sort}{2}{subsection.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.2}Manu\IeC {\'a}ln\IeC {\'\i } sazba bibliografie}{4}{subsubsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.5}Merge Sort}{2}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Drobn\IeC {\'a} makra}{5}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.6}Heap Sort}{2}{subsection.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Sazba rejst\IeC {\v r}\IeC {\'\i }ku}{5}{subsection.2.6}% 
+\contentsline {subsection}{\numberline {2.7}Counting Sort}{2}{subsection.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Sazba zdrojov\IeC {\'y}ch k\IeC {\'o}d\IeC {\r u}}{5}{subsection.2.7}% 
+\contentsline {subsection}{\numberline {2.8}Radix Sort}{2}{subsection.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Documentation}{8}{section.3}% 
+\contentsline {subsection}{\numberline {2.9}Bucket Sort}{2}{subsection.2.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}User Guide}{8}{section.4}% 
+\contentsline {section}{\numberline {3}Documentation}{2}{section.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{10}{section*.6}% 
+\contentsline {section}{\numberline {4}User Guide}{2}{section.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Conclusions}{3}{section*.6}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{11}{section*.8}% 
+\contentsline {section}{Conclusions}{4}{section*.8}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{12}{appendix.A}% 
+\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{5}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{12}{appendix.B}% 
+\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{5}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{12}{appendix.C}% 
+\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{5}{appendix.C}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Acronyms}{14}{section*.10}% 
+\contentsline {section}{Acronyms}{7}{section*.10}% 
