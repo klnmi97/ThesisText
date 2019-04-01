@@ -177,14 +177,34 @@ Assume an array of items. At the beginning of sorting process unsorted part is r
 
 At the base of the Bubble Sort lies the idea of exchanging two adjacent elements if they are in wrong order. Algorithm works stepping through the all elements so the largest element tends to move to the right.
 
-Now we are going to the details. Let us have an array to sort. As it was already mentioned that for ascending order largest element "bubbles" to the top. This way after the first iteration largest item moves up to the $n$-th position, where $n$ is number of elements. 
+Now we are going to the details. Let us have an array to sort. Algorithm does $n$ iterations where $n$ is equal to the size of array. And at the end of each iteration through the array the range of inspected items gets smaller till it becomes zero.
 
-Repeating this step we receive each element into its right position.
+It happens because during each iteration as it was already mentioned for ascending order the largest element of current range "bubbles" to the end.
+
+Repeating such iterations we receive each element into its right position.
 
 %add pic of bubblesort in action
 \subsection{Cocktail Sort}
 
+Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to the Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
+
+Assume array that needs to be sorted in ascending order. Above we described Bubble Sort and this algorithm has a significant problem. It iterates through array only in one direction. This way, smaller items which are closer to the end of array reach its right positions slowly.
+
+Solution is to make Bubble Sort iterate left-to-right and right-to-left. Cocktail Sort uses two cycles inside a big one:
+
+\begin{enumerate}
+ \item Iterate from $a$ to $b$, compare adjacent elements and swap if they are not ordered.
+ \item Iterate from $b$ to $a + 1$ same way as in the step $1$
+ \item Repeat steps 1. and 2. but with a bit different range from $a = a + 1$ to $b = b - 1$
+\end{enumerate}
+
 \subsection{Quick Sort}
+
+Quick Sort works on the principle "divide and conquer". It recursively applies itself on smaller parts of array until it is not sorted.
+
+Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item also called pivot is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
+
+This way, it is enough to apply Quick Sort on each part of array not including pivot until array is not sorted.
 
 \subsection{Merge Sort}
 

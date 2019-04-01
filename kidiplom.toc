@@ -19,7 +19,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Bubble Sort}{2}{subsection.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Cocktail Sort}{3}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.4}Cocktail Sort}{2}{subsection.2.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Quick Sort}{3}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
