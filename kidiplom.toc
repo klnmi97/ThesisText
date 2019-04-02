@@ -15,7 +15,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Insertion Sort}{1}{subsection.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Selection Sort}{1}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.2}Selection Sort}{2}{subsection.2.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Bubble Sort}{2}{subsection.2.3}% 
 \defcounter {refsection}{0}\relax 
@@ -23,32 +23,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Quick Sort}{3}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Merge Sort}{3}{subsection.2.6}% 
+\contentsline {subsection}{\numberline {2.6}Merge Sort}{4}{subsection.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Heap Sort}{3}{subsection.2.7}% 
+\contentsline {subsection}{\numberline {2.7}Heap Sort}{4}{subsection.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Counting Sort}{3}{subsection.2.8}% 
+\contentsline {subsection}{\numberline {2.8}Counting Sort}{4}{subsection.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9}Radix Sort}{3}{subsection.2.9}% 
+\contentsline {subsection}{\numberline {2.9}Radix Sort}{4}{subsection.2.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.10}Bucket Sort}{3}{subsection.2.10}% 
+\contentsline {subsection}{\numberline {2.10}Bucket Sort}{4}{subsection.2.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Documentation}{3}{section.3}% 
+\contentsline {section}{\numberline {3}Documentation}{4}{section.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}User Guide}{3}{section.4}% 
+\contentsline {section}{\numberline {4}User Guide}{4}{section.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{4}{section*.6}% 
+\contentsline {section}{Conclusions}{5}{section*.6}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{5}{section*.8}% 
+\contentsline {section}{Conclusions}{6}{section*.8}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{6}{appendix.A}% 
+\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{7}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{6}{appendix.B}% 
+\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{7}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{6}{appendix.C}% 
+\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{7}{appendix.C}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Acronyms}{8}{section*.10}% 
+\contentsline {section}{Acronyms}{9}{section*.10}% 

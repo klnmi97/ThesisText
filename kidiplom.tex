@@ -158,11 +158,11 @@ This section describes algorithms represented in the program.
 \subsection{Insertion Sort}
 
 Insertion sorting algorithm has a simple idea. Assume the items to be sorted. We divide the items into two parts: sorted one and unsorted one. Usually at the beginning sorted part consists of the first element. Then for the each next step we take one item from the unsorted part and insert it into the right place among the sorted items.
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 	
 	\includegraphics[scale=0.7]{img/Insertion.png}
-	\caption{•}\label{fig:insert}
+	\caption{Insertion Sort at start}\label{fig:insert}
 \end{center}
 \end{figure}
 
@@ -202,11 +202,25 @@ Solution is to make Bubble Sort iterate left-to-right and right-to-left. Cocktai
 
 Quick Sort works on the principle "divide and conquer". It recursively applies itself on smaller parts of array until it is not sorted.
 
-Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item also called pivot is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
+Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item also known as pivot is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
 
 This way, it is enough to apply Quick Sort on each part of array not including pivot until array is not sorted.
 
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.7]{img/Quicksort.png}
+	\caption{Quick Sort principle}\label{fig:insert}
+\end{center}
+\end{figure}
+
+There are several methods of partitioning of array into two parts, here I want to describe one that is demonstrated in the software part of this work.
+
+Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the last item and index is the first. Next each item of array except pivot is compared with the pivot. If current item is lesser or equal to pivot, it is swapped with the index item, next in order item becomes index. Finally, index and pivot are swapped and this way pivot is on its final position.
+
 \subsection{Merge Sort}
+
+Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer".
 
 \subsection{Heap Sort}
 
