@@ -277,7 +277,11 @@ Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$
 
 Counting Sort is usually used for sorting keys in some range. Algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations.
 
-Assume we have integers in range from $0$ to $k$.
+For better understanding let us have an example. Assume we have integers in range from $0$ to $k$ and empty output array. For this range we create helping array that will keep counters for each number from the range. Then all counters from the helping array are set to $0$. To obtain final positions for items to be sorted we need to make further computations. 
+
+Firstly, for each element from the initial array we increase the respective counter which is determined from the element value. That means value of the element is its counter position in the helping array. Secondly, we need to sum each counter with previous. Finally, for each item from the initial array the respective counter is decreased by one and the value of counter now is the final position, we move item to the output array.
+
+Worst case complexity for Counting Sort is $\Theta(k + n)$, where $k$ is number of items in range and $n$ is size of array to be sorted.
 
 \subsection{Radix Sort}
 
