@@ -104,11 +104,13 @@
 %% \documentclass). Použijte pouze při této sazbě, ne při (výchozí)
 %% sazbě v prostředí thebibliography.
 \bibliography{bibliografie.bib}
-
+\addbibresource{bibliografie.bib}
 %% Další dodatečné styly (balíky) potřebné pro sazbu vlastního textu
 %% práce.
 \usepackage{lipsum}
 \usepackage{algorithm}
+\usepackage{bm}
+
 \begin{document}
 %% Sazba úvodních stran -- titulní, s bibliografickými údaji, s
 %% anotací a klíčovými slovy, s poděkováním a prohlášením, s obsahem a
@@ -168,6 +170,7 @@ Insertion sorting algorithm has a simple idea. Assume the items to be sorted. We
 
 
 \subsection{Selection Sort}
+\label{sec:selection}
 
 Selection Sort is based on the repeated selection. As well as in the Insertion Sort, here we have sorted part and unsorted part.
 
@@ -220,11 +223,61 @@ Firstly, a pivot and index item are selected on the unsorted array or its part. 
 
 \subsection{Merge Sort}
 
-Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer".
+Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer". The logic of it is simple: recursively divide data into two parts till it becomes indivisible then merge parts back.
+
+Merge procedure itself takes items from each previously divided part one by one, compares them and moves the smallest to the output, repeats previous step.
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=2.5]{img/Mergesort.png}
+	\caption{Merge Sort principle}\label{fig:insert}
+\end{center}
+\end{figure}
 
 \subsection{Heap Sort}
 
+Heap Sort is a selection based algorithm and it offers another interesting approach to sorting. In comparison with the \hyperref[sec:selection]{Selection Sort} it has optimized selection by using binary heap data structure. 
+
+Binary heap is a complete binary tree; it means that all levels of tree, except the last one, must be completely filled with nodes. Also, this data structure satisfies the \textit{heap condition}: each node key is greater than or equal to its child keys (this heap type is called \textit{max-heap}).
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.7]{img/Maxheap.png}
+	\caption{Max-Heap}\label{fig:maxheap}
+\end{center}
+\end{figure}
+
+Binary heap may be implemented by simple array. Item at position zero is a root node, items at position one and two are respectively left and right children of the root. From that representation it is easy to find children of each node (if they exist). Assume a node at position $k$ then its left child is at $2k + 1$ and its right child is at $2k + 2$.
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=3]{img/Heapsort.png}
+	\caption{Children positions in heap}\label{fig:heapsort}
+\end{center}
+\end{figure}
+
+\textbf{Heap Sort itself works as follows:}
+\begin{enumerate}
+ \item \label{itm:step1} Build max-heap
+ \item \label{itm:step2} Swap root and the last node, reduce size of heap by one
+ \item \label{itm:step3} Build max-heap without the node on a reduced position
+ \item Repeat steps \ref{itm:step2} and \ref{itm:step3} until the range of array is one
+\end{enumerate}
+
+To build \textit{max-heap} from current node we need to assure that right and left child comprise max-heaps. This way, in the first step procedure for building max-heap is recursively applied for each node that has at least one child from bottom to top.
+
+After each swap of the root node and the node at last considered position last node takes its final place. This way it joins the sorted part of array.
+
+Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
+
 \subsection{Counting Sort}
+
+Counting Sort is usually used for sorting keys in some range. Algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations.
+
+Assume we have integers in range from $0$ to $k$.
 
 \subsection{Radix Sort}
 

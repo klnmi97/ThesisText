@@ -1,0 +1,88 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{knuth}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{second}
+      \field{langid}{english}
+      \field{title}{The Art of Computer Programming, Volume 3, Sorting and Searching}
+      \field{year}{2005}
+      \true{nocite}
+    \endentry
+    \entry{sedgewik}{book}{}
+      \name{author}{1}{}{%
+        {{hash=399bf41f72f07703f299a0ab81b3a20f}{%
+           family={R.},
+           familyi={R\bibinitperiod},
+           given={Sedgewik},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Praha, Softpress}%
+      }
+      \strng{namehash}{399bf41f72f07703f299a0ab81b3a20f}
+      \strng{fullhash}{399bf41f72f07703f299a0ab81b3a20f}
+      \strng{bibnamehash}{399bf41f72f07703f299a0ab81b3a20f}
+      \strng{authorbibnamehash}{399bf41f72f07703f299a0ab81b3a20f}
+      \strng{authornamehash}{399bf41f72f07703f299a0ab81b3a20f}
+      \strng{authorfullhash}{399bf41f72f07703f299a0ab81b3a20f}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algoritmy v C: základy, datové struktury, třídění, vyhledávání}
+      \field{year}{2003}
+      \true{nocite}
+    \endentry
+    \entry{wiki}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \true{nocite}
+      \verb{urlraw}
+      \verb en.wikipedia.org
+      \endverb
+      \verb{url}
+      \verb en.wikipedia.org
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,15 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'kidiplom.blg'
+[31] biber-MSWIN64:315> INFO - === 
+[58] Biber.pm:371> INFO - Reading 'kidiplom.bcf'
+[148] Biber.pm:886> INFO - Using all citekeys in bib section 0
+[163] Biber.pm:4093> INFO - Processing section 0
+[178] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliografie.bib' for section 0
+[182] bibtex.pm:1523> INFO - LaTeX decoding ...
+[190] bibtex.pm:1340> INFO - Found BibTeX data source 'bibliografie.bib'
+[208] UCollate.pm:68> INFO - Overriding locale 'en_GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[208] UCollate.pm:68> INFO - Overriding locale 'en_GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[209] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en_GB'
+[209] Biber.pm:3927> INFO - No sort tailoring available for locale 'en_GB'
+[216] bbl.pm:636> INFO - Writing 'kidiplom.bbl' with encoding 'UTF-8'
+[218] bbl.pm:739> INFO - Output to kidiplom.bbl
