@@ -1,15 +1,19 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Insertion Sort at start}}{2}{figure.1}% 
+\contentsline {figure}{\numberline {1}{\ignorespaces Insertion Sort at start: orange - sorted, blue - unsorted}}{2}{figure.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Quick Sort principle}}{3}{figure.2}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Quick Sort principle}}{4}{figure.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Merge Sort principle}}{4}{figure.3}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Merge Sort principle}}{5}{figure.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Max-Heap}}{5}{figure.4}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Max-Heap}}{6}{figure.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Children positions in heap}}{5}{figure.5}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Children positions in heap}}{6}{figure.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Radix Sort example}}{7}{figure.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Radix Sort}}{8}{figure.7}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
