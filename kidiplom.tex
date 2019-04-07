@@ -131,32 +131,41 @@
 
 \section{Introduction}
 
-Nowadays sorting algorithms are widely used in software. For example if you open file explorer on your PC, you may see files sorted in different ways. Searching in sorted data is more efficient than in not sorted. Students of computer science start learning different algorithms in the first year of studies and sorting algorithms are among them.
+Nowadays sorting algorithms are widely used in software. For example, if you open file explorer on your PC, you may see files sorted in different ways. Searching in sorted data is more efficient than not sorted. Students of computer science start learning different algorithms in the first year of studies and sorting algorithms are among them.
 
-Since I faced the problems of sorting during the course of algorithm design in the first year of my studies, now there is understanding that the visual representation is a vital part of studying process. During working on the thesis it was very exciting to learn different techniques of sorting algorithms into the depth.
+Since I faced the problems of sorting during the course of algorithm design in the first year of my studies, there is an understanding that the visual representation is a vital part of the studying process. During working on the thesis it was very exciting to learn different techniques of sorting algorithms into the depth.
 
-The main goal of the thesis was to create a program which would serve as a tool for understanding how most known sorting algorithms work. There was an attempt to make best possible user experience. The demonstration software is made in a user-friendly and easy-to-use style. To gain maximal benefit from learning you can try each sorting algorithm on your own data. 
+The main goal of the thesis was to create a program which would serve as a tool for understanding how most known sorting algorithms work. There was an attempt to make the best possible user experience. The demonstration software is made in a user-friendly and easy-to-use style. To gain maximal benefit from learning you can try each sorting algorithm on your own data. 
 
-Text of the thesis describes principles of some basic most known sorting algorithms which are demonstrated in the computer program. It might be used as a source for learning algorithms by students. Also, the program might be easily used as a demonstration by lecturers and tutors during classes. In addition, there is programmer documentation and user guide to the provided software.
+The text of the thesis describes principles of the most known sorting algorithms which are demonstrated in the computer program. It might be used as a source for learning algorithms by students. Also, the program might be easily used as a demonstration by lecturers and tutors during classes. In addition, there is programmer documentation and user guide to the provided software.
 
-Readers of this text are expected to have some programming experience to know basic data structures such as arrays, lists, trees and understand recursive procedures. Also knowledge of some simple algorithms and their implementations could be helpful. In order to understand topic better, for some definitions knowledge of linear algebra and calculus is involved.
+Readers of this text are expected to have some programming experience to know basic data structures such as arrays, lists, trees and understand recursive procedures. Also, knowledge of some simple algorithms and their implementations could be helpful. In order to understand the topic better, knowledge of linear algebra and calculus is involved.
 
 I want to apologize to the reader for possible mistakes and typing errors in this text. Thank you for understanding.
 
 \newpage
-\subsection{What is algorithm?}
+\subsection{What is an algorithm?}
 
-Before we start the main part of this text describing algorithms and the software, we need to assure that there is understanding of the basics. We shall begin with the definition of algorithm.
+Before moving on to the main part of the text which describes algorithms and the software, we need to assure that there is an understanding of the basics. We shall begin with the algorithm definition.
 
-What is algorithm? How can we define it? We may say simply that algorithm is a sequence of steps or instructions that solves some kind of problem. Although it may be a bit imprecise, because we have not defined what is problem and what is instruction.
+What is an algorithm? How can we define it? We may say simply that an algorithm is a sequence of steps or instructions that solves some kind of problem. Although it may be a bit imprecise because we have not defined what does problem mean and what does instruction mean.
 
-Problem is a kind of task that we need solve. We are facing different problems every day: fastest route to work or home, etc. However, not all of them are problems that may fit our algorithm definition. Suitable definition of problem has some limitations: problem should be specified by its inputs and all inputs have to be mapped to some outputs.
+Problem is a kind of task that we need to solve. We are facing different problems every day: finding the fastest route to work or home, etc. However, not all of them are problems that may fit our algorithm definition. A suitable definition of a problem has some limitations: problem should be specified by its inputs and all inputs have to be mapped to some outputs.
 
-Step or instruction is some action that is clear to its executor. In our case it might be a PC.
+Step or instruction is some action that is clear to its executor. In our case, it could be a PC.
 
-To solve some problem means to find a solution for each input.
+To solve a problem means to find a solution for each input.
 
 Here is more precise definition by Thomas Cormen: "Informally, an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. An algorithm is thus a sequence of computational steps that transform the input into the output." \cite{cormen}
+\\\\
+\textbf{5 features of an algorithm according to D. Knuth\cite{knuth1}:}
+\begin{itemize}
+	\item \textit{finiteness} - an algorithm should end in a finite number of steps.
+	\item \textit{definiteness} - each step of an algorithm should have precise definition. And it means that for the same inputs we will obtain the same results.
+	\item \textit{input} - an algorithm may have inputs, they are taken from some set of objects.
+	\item \textit{output} - an algorithm may have outputs which should be in some relation with inputs.
+	\item \textit{effectiveness} - we may expect an algorithm to be effective. It means "its operations must all be sufficiently basic that they can in principle be done exactly and in a finite length of time by someone using pencil and paper."\cite{knuth1}
+\end{itemize}
 
 \subsection{Types of algorithms}
 
@@ -170,7 +179,7 @@ This section describes algorithms represented in the program.
 
 \subsection{Insertion Sort}
 \label{sec:insertion}
-Insertion sorting algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element. Then, for the each next step we take first item from the unsorted part of the array and insert it into the right place among the sorted items.
+Insertion sorting algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element. Then, for each next step, we take the first item from the unsorted part of the array and insert it into the right place among the sorted items.
 
 \begin{figure}[H]
 \begin{center}
@@ -434,7 +443,7 @@ nebo v souboru \texttt{readme.txt}.
 %% -------------------------------------------------------------------
 
 %% Sazba volitelného seznamu zkratek, za přílohami.
-\printglossary
+%%\printglossary
 
 %% Sazba povinné bibliografie, za přílohami (případně i za seznamem
 %% zkratek). Při použití BibLaTeXu použijte makro
