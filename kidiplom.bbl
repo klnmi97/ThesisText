@@ -19,25 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{cormen}{book}{}
+      \name{author}{4}{}{%
+        {{hash=45b8a1d10dd28c65dd843a76583308c3}{%
+           family={Cormen},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c71fd291b2f1a30d3a8bdcd818638fd0}{%
+           family={Leiserson},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3da64961baf205f9d8c18f6f44a94691}{%
+           family={Rivest},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=340a9e41a37c56843c3354ab4ef758e7}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{83a262a12babb909d9bd8fd015bed756}
+      \strng{fullhash}{83a262a12babb909d9bd8fd015bed756}
+      \strng{bibnamehash}{83a262a12babb909d9bd8fd015bed756}
+      \strng{authorbibnamehash}{83a262a12babb909d9bd8fd015bed756}
+      \strng{authornamehash}{83a262a12babb909d9bd8fd015bed756}
+      \strng{authorfullhash}{83a262a12babb909d9bd8fd015bed756}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Introduction to algorithms}
+      \field{year}{2001}
+      \true{nocite}
+    \endentry
     \entry{knuth}{book}{}
       \name{author}{1}{}{%
-        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+        {{hash=d6c321ee95d690d6a42850df470be5e0}{%
            family={Knuth},
            familyi={K\bibinitperiod},
-           given={Donald\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+           given={D.},
+           giveni={D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Addison-Wesley}%
       }
-      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \strng{namehash}{d6c321ee95d690d6a42850df470be5e0}
+      \strng{fullhash}{d6c321ee95d690d6a42850df470be5e0}
+      \strng{bibnamehash}{d6c321ee95d690d6a42850df470be5e0}
+      \strng{authorbibnamehash}{d6c321ee95d690d6a42850df470be5e0}
+      \strng{authornamehash}{d6c321ee95d690d6a42850df470be5e0}
+      \strng{authorfullhash}{d6c321ee95d690d6a42850df470be5e0}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{second}
@@ -48,38 +89,86 @@
     \endentry
     \entry{sedgewik}{book}{}
       \name{author}{1}{}{%
-        {{hash=399bf41f72f07703f299a0ab81b3a20f}{%
-           family={R.},
-           familyi={R\bibinitperiod},
-           given={Sedgewik},
-           giveni={S\bibinitperiod}}}%
+        {{hash=dab426883b0c224b023b40469d97bd9b}{%
+           family={Sedgewik},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Praha, Softpress}%
       }
-      \strng{namehash}{399bf41f72f07703f299a0ab81b3a20f}
-      \strng{fullhash}{399bf41f72f07703f299a0ab81b3a20f}
-      \strng{bibnamehash}{399bf41f72f07703f299a0ab81b3a20f}
-      \strng{authorbibnamehash}{399bf41f72f07703f299a0ab81b3a20f}
-      \strng{authornamehash}{399bf41f72f07703f299a0ab81b3a20f}
-      \strng{authorfullhash}{399bf41f72f07703f299a0ab81b3a20f}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \strng{namehash}{dab426883b0c224b023b40469d97bd9b}
+      \strng{fullhash}{dab426883b0c224b023b40469d97bd9b}
+      \strng{bibnamehash}{dab426883b0c224b023b40469d97bd9b}
+      \strng{authorbibnamehash}{dab426883b0c224b023b40469d97bd9b}
+      \strng{authornamehash}{dab426883b0c224b023b40469d97bd9b}
+      \strng{authorfullhash}{dab426883b0c224b023b40469d97bd9b}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Algoritmy v C: základy, datové struktury, třídění, vyhledávání}
       \field{year}{2003}
       \true{nocite}
     \endentry
-    \entry{wiki}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+    \entry{alm1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f4f3a283624071dae11afca958971e52}{%
+           family={Bělohlávek},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Katedra informatiky, Univerzita Palackeho v Olomouci}%
+      }
+      \strng{namehash}{f4f3a283624071dae11afca958971e52}
+      \strng{fullhash}{f4f3a283624071dae11afca958971e52}
+      \strng{bibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{czech}
+      \field{title}{Algoritmická matematika 1}
       \true{nocite}
       \verb{urlraw}
-      \verb en.wikipedia.org
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-1.pdf
       \endverb
       \verb{url}
-      \verb en.wikipedia.org
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-1.pdf
+      \endverb
+    \endentry
+    \entry{wiki}{online}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Wikipedia}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.wikipedia.org/
+      \endverb
+      \verb{url}
+      \verb https://www.wikipedia.org/
+      \endverb
+    \endentry
+    \entry{geeks}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{GeeksforGeeks}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/
       \endverb
     \endentry
   \enddatalist

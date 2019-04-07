@@ -104,7 +104,6 @@
 %% \documentclass). Použijte pouze při této sazbě, ne při (výchozí)
 %% sazbě v prostředí thebibliography.
 \bibliography{bibliografie.bib}
-\addbibresource{bibliografie.bib}
 %% Další dodatečné styly (balíky) potřebné pro sazbu vlastního textu
 %% práce.
 \usepackage{lipsum}
@@ -132,26 +131,38 @@
 
 \section{Introduction}
 
-Nowadays sorting algorithms are widely used in software. For example if you open file explorer on your PC, you may see files sorted in different ways. Students of computer science start learning different algorithms in the first year of studies and sorting algorithms are among them.
+Nowadays sorting algorithms are widely used in software. For example if you open file explorer on your PC, you may see files sorted in different ways. Searching in sorted data is more efficient than in not sorted. Students of computer science start learning different algorithms in the first year of studies and sorting algorithms are among them.
 
-The main goal of the thesis was to create a program which would serve as a tool for understanding how most known sorting algorithms work. Since I faced the problems of sorting during the course of algorithm design, now there is understanding that the visual representation is a vital part of studying process.
+Since I faced the problems of sorting during the course of algorithm design in the first year of my studies, now there is understanding that the visual representation is a vital part of studying process. During working on the thesis it was very exciting to learn different techniques of sorting algorithms into the depth.
 
-Text of the thesis describes principles of some basic sorting algorithms.  
+The main goal of the thesis was to create a program which would serve as a tool for understanding how most known sorting algorithms work. There was an attempt to make best possible user experience. The demonstration software is made in a user-friendly and easy-to-use style. To gain maximal benefit from learning you can try each sorting algorithm on your own data. 
 
+Text of the thesis describes principles of some basic most known sorting algorithms which are demonstrated in the computer program. It might be used as a source for learning algorithms by students. Also, the program might be easily used as a demonstration by lecturers and tutors during classes. In addition, there is programmer documentation and user guide to the provided software.
 
+Readers of this text are expected to have some programming experience to know basic data structures such as arrays, lists, trees and understand recursive procedures. Also knowledge of some simple algorithms and their implementations could be helpful. In order to understand topic better, for some definitions knowledge of linear algebra and calculus is involved.
 
-\subsection{Usage of sorting algorithms?}
+I want to apologize to the reader for possible mistakes and typing errors in this text. Thank you for understanding.
 
-\subsection{Visual solution}
+\newpage
+\subsection{What is algorithm?}
 
-\subsection{Přepínače}
-Styl kidiplom je z hlediska uživatele zastoupen ekvivalentně nazvanou třídou, kterou je třeba volat na záčátku dokumentu:
+Before we start the main part of this text describing algorithms and the software, we need to assure that there is understanding of the basics. We shall begin with the definition of algorithm.
 
+What is algorithm? How can we define it? We may say simply that algorithm is a sequence of steps or instructions that solves some kind of problem. Although it may be a bit imprecise, because we have not defined what is problem and what is instruction.
 
-Následuje přehled přepínačů, je vždy uvedeno jméno přepínač, včetně výchozí hodnoty. Přepínače uvádí tabulka \ref{tab:prepinace}.
+Problem is a kind of task that we need solve. We are facing different problems every day: fastest route to work or home, etc. However, not all of them are problems that may fit our algorithm definition. Suitable definition of problem has some limitations: problem should be specified by its inputs and all inputs have to be mapped to some outputs.
 
-\subsection{Geometrie stránky}
-Tento styl používá list velikosti $A4$. Pro sazbu prací je třeba použít jednostrannou sazbu. Levý okraj je rozšířen s ohledem na vazbu výsledné knižní podoby práce.
+Step or instruction is some action that is clear to its executor. In our case it might be a PC.
+
+To solve some problem means to find a solution for each input.
+
+Here is more precise definition by Thomas Cormen: "Informally, an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. An algorithm is thus a sequence of computational steps that transform the input into the output." \cite{cormen}
+
+\subsection{Types of algorithms}
+
+\subsection{Complexity}
+
+\subsection{Sorting}
 
 \section{Algorithms}
 
@@ -183,7 +194,7 @@ Assume an array of items to sort. At the beginning of the sorting process unsort
 Complexity of this sorting algorithm is $\Theta(n^2)$.
 
 \subsection{Bubble Sort}
-
+\label{sec:bubble}
 Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. Algorithm works stepping through the all elements from left to right so the largest elements tend to move or "bubble" to the right. That is why the algorithm is called Bubble Sort.
 
 Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items gets smaller by one till only two elements left. After this two elements are compared, the array is considered as sorted.
@@ -193,7 +204,7 @@ Bubble Sort complexity is $\Theta(n^2)$.
 %add pic of bubblesort in action
 \subsection{Cocktail Sort}
 
-Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to the Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
+Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
 
 Assume array that needs to be sorted in ascending order. Above we described Bubble Sort and this algorithm has a significant problem. It iterates through array only in one direction. This way, smaller items which are closer to the end of array reach its right positions slowly.
 
@@ -204,6 +215,8 @@ Solution is to make Bubble Sort iterate left-to-right and right-to-left. Cocktai
  \item Iterate from $b$ to $a + 1$ same way as in the step $1$
  \item Repeat steps 1. and 2. but with a bit different range from $a = a + 1$ to $b = b - 1$
 \end{enumerate}
+
+Cocktail Sort works better than \hyperref[sec:bubble]{Bubble Sort} in some situations, e.g. array is already sorted. However, number of swaps remains the same. This way, worst case complexity remains $\Theta(n^2)$.
 
 \subsection{Quick Sort}
 
@@ -225,11 +238,15 @@ There are several methods of partitioning of array into two parts, here I want t
 
 Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the last item and index is the first. Next each item of array except pivot is compared with the pivot. If current item is lesser or equal to pivot, it is swapped with the index item, next in order item becomes index. Finally, index and pivot are swapped and this way pivot is on its final position.
 
+Quick Sort is counted as an effective algorithm because its average complexity is $\Theta(n \log n)$. However, when array is maximally unbalanced it may show worst performance. Worst case complexity is $\Theta(n^2)$.
+
 \subsection{Merge Sort}
 
 Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer". The logic of it is simple: recursively divide data into two parts till it becomes indivisible then merge parts back.
 
 Merge procedure itself takes items from each previously divided part one by one, compares them and moves the smallest to the output, repeats previous step.
+
+Merge Sort complexity is $\Theta(n \log n)$
 
 \begin{figure}[H]
 \begin{center}
@@ -315,7 +332,7 @@ Firstly, Bucket Sort distributes data to buckets. Then, there is need to sort ea
 \begin{center}
 	
 	\includegraphics[scale=0.5]{img/Bucketsort.png}
-	\caption{Radix Sort}\label{fig:radixsort}
+	\caption{Bucket Sort}\label{fig:radixsort}
 \end{center}
 \end{figure}
 
