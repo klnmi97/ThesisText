@@ -173,9 +173,23 @@ Here is more precise definition by Thomas Cormen: "Informally, an algorithm is a
 
 Frequently happen situations when we need to know the performance of some algorithm. There might be a necessity to compare performance of some algorithms, for example. Or we might need to know the time for an algorithm to run with some input. And here we are moving to the concept of the algorithm complexity.
 
-There is a time complexity and a space complexity. In general, complexity gives the amount of time or space needed to run an algorithm. To be more precise: time complexity is a function $f:\mathbb{N}\to\mathbb{N}$ that maps each input to the maximum number of steps for this input needed for an algorithm to complete a task.
+There is a time complexity and a space complexity. In general, complexity gives the amount of time or space needed to run an algorithm. To be more precise: time complexity is a function $f:\mathbb{N}\to\mathbb{N}$ that maps each input to the maximum number of steps for this input needed for an algorithm to complete a task. We will be talking here only about the time complexity and will call it just complexity.
 
+Analyzing algorithms we might want to investigate different sides of the algorithm performance. Usually, it could be a \textit{worst-case analysis} or an \textit{average-case analysis}. The worst-case analysis implies determining the longest running time of all inputs with the same length. In the average-case analysis, we take the average running time of inputs with the same length.
 
+Often complexity of an algorithm is measured on the large inputs. Since complexity is expressed by a polynomial, we might want to have it in a more convenient form. This type of estimation is called an \textit{asymptotic analysis}. Such form takes only the highest order term of the polynomial.
+
+To be more clear, let us have an example. $f(n) = 5n^3 + 10n^2 + 20n + 4$, the highest degree term here is $5n^3$. In some cases we can omit the coefficient 5, now $f$ is asymptotically at most $n^3$.
+
+For such approximation there exists \textbf{O notation}:
+
+\begin{enumerate}
+	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity.
+	\item \textit{Asymptotic lower bound}(or $\Omega$). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity.
+	\item \textit{Asymptotic tight bound}(or $\Theta$). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
+\end{enumerate}
+
+Also, there is a \textit{small-o} notation. It slightly differs from the \textit{Big-O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
 
 \subsection{Sorting}
 

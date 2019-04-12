@@ -2010,6 +2010,7 @@
     <bcf:citekey order="1">cormen</bcf:citekey>
     <bcf:citekey order="2">knuth1</bcf:citekey>
     <bcf:citekey order="3">knuth1</bcf:citekey>
+    <bcf:citekey order="4">sipser</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
