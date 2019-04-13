@@ -109,6 +109,8 @@
 \usepackage{lipsum}
 \usepackage{algorithm}
 \usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning,fit,intersections}
 
 \begin{document}
 %% Sazba úvodních stran -- titulní, s bibliografickými údaji, s
@@ -190,6 +192,34 @@ For such approximation there exists \textbf{O notation}:
 \end{enumerate}
 
 Also, there is a \textit{small-o} notation. It slightly differs from the \textit{Big-O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
+
+\begin{figure}[H]
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[->]  (0,0)coordinate(O) -- (7,0) node[anchor=north] {$n$};
+			\draw[->]  (0,0) -- (0,6);
+			\draw[domain=0:7,smooth,variable=\x,black,name path=c1] plot ({\x},{0.5*\x+1*sin(\x r)+1})node[right]{$c * g(n)$};
+			\draw[domain=0:7,smooth,variable=\x,black,name path=c2] plot ({\x},{0.2*\x+0.5*sin(\x r)+1.5})node[right,black]{$f(n)$};
+			\fill[red,name intersections={of=c1 and c2}] (intersection-1) circle (2pt);
+			\draw[dashed] (intersection-1) -- (intersection-1|-O) node[below]{$n_0$};
+
+		\end{tikzpicture}
+		\caption{$f(n)$ in $O(g(n))$} \label{fig:big-omega}
+	\end{center}
+\end{figure}
+
+For the asymptotic analysis of an algorithm mostly the worst-case complexity is used. Algorithm is considered for practically solvable if its running time is in $O(n^c)$, $c$ is usually a small constant. 
+
+Here are some complexities (from the slowest to the fastest growing):
+\begin{enumerate}
+ \item $O(1)$ - constant complexity
+ \item $O(\log(n))$ - logarithmic
+ \item $O(n)$ - linear
+ \item $O(n \log(n))$ - linear-logarithmic
+ \item $O(n^2)$ - quadratic
+ \item $O(2^n)$ - exponential
+ \item $O(n!)$ - factorial
+\end{enumerate}
 
 \subsection{Sorting}
 
