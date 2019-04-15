@@ -55,6 +55,8 @@
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{edition}{Second Edition}
+      \field{isbn}{0-262-03293-7}
       \field{langid}{english}
       \field{title}{Introduction to algorithms}
       \field{year}{2001}
@@ -82,11 +84,43 @@
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{second}
+      \field{edition}{Third Edition}
+      \field{isbn}{0-201-89683-4}
       \field{langid}{english}
-      \field{title}{The Art of Computer Programming, Volume 1, Fundamental Algorithms}
-      \field{volume}{1}
-      \field{year}{2005}
+      \field{subtitle}{Fundamental Algorithms}
+      \field{title}{The Art of Computer Programming}
+      \field{volume}{Volume 1}
+      \field{year}{2004}
+      \true{nocite}
+    \endentry
+    \entry{sipser}{book}{}
+      \name{author}{1}{}{%
+        {{hash=75a9e61254fc449d4886b6ee4cff0b22}{%
+           family={Sipser},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {PWS Publishing Company}%
+      }
+      \strng{namehash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \strng{fullhash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \strng{bibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \strng{authorbibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \strng{authornamehash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \strng{authorfullhash}{75a9e61254fc449d4886b6ee4cff0b22}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-534-94728-X}
+      \field{langid}{english}
+      \field{title}{Introduction to the Theory of Computation}
+      \field{year}{1997}
       \true{nocite}
     \endentry
     \entry{knuth3}{book}{}
@@ -107,15 +141,17 @@
       \strng{authornamehash}{d6c321ee95d690d6a42850df470be5e0}
       \strng{authorfullhash}{d6c321ee95d690d6a42850df470be5e0}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{second}
+      \field{edition}{Second Edition}
+      \field{isbn}{0-201-89685-0}
       \field{langid}{english}
-      \field{title}{The Art of Computer Programming, Volume 3, Sorting and Searching}
-      \field{volume}{3}
-      \field{year}{2005}
+      \field{subtitle}{Sorting and Searching}
+      \field{title}{The Art of Computer Programming}
+      \field{volume}{Volume 3}
+      \field{year}{2004}
       \true{nocite}
     \endentry
     \entry{sedgewik}{book}{}
@@ -135,38 +171,12 @@
       \strng{authorbibnamehash}{dab426883b0c224b023b40469d97bd9b}
       \strng{authornamehash}{dab426883b0c224b023b40469d97bd9b}
       \strng{authorfullhash}{dab426883b0c224b023b40469d97bd9b}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Algoritmy v C: základy, datové struktury, třídění, vyhledávání}
       \field{year}{2003}
-      \true{nocite}
-    \endentry
-    \entry{sipser}{book}{}
-      \name{author}{1}{}{%
-        {{hash=75a9e61254fc449d4886b6ee4cff0b22}{%
-           family={Sipser},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {PWS Publishing Company, Boston, MA}%
-      }
-      \strng{namehash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \strng{fullhash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \strng{bibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \strng{authorbibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \strng{authornamehash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \strng{authorfullhash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Introduction to the Theory of Computation}
-      \field{year}{1997}
       \true{nocite}
     \endentry
     \entry{alm1}{book}{}
@@ -186,8 +196,8 @@
       \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{czech}
@@ -201,8 +211,8 @@
       \endverb
     \endentry
     \entry{wiki}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{Wikipedia}

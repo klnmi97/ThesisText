@@ -3,19 +3,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces $f(n)$ in $O(g(n))$}}{4}{figure.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort at start: orange - sorted, blue - unsorted}}{5}{figure.2}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning}}{6}{figure.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Quick Sort principle}}{7}{figure.3}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Bubble Sort in progress}}{7}{figure.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Merge Sort principle}}{8}{figure.4}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Quick Sort principle}}{8}{figure.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Max-Heap}}{9}{figure.5}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Merge Sort principle}}{9}{figure.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Children positions in heap}}{9}{figure.6}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Max-Heap}}{10}{figure.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Radix Sort example}}{11}{figure.7}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Children positions in heap}}{10}{figure.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Bucket Sort}}{11}{figure.8}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Radix Sort example}}{11}{figure.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Sort}}{12}{figure.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Main window}}{14}{figure.10}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}

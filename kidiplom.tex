@@ -244,30 +244,31 @@ Here, in the text, we are talking only about the algorithms of internal sorting.
 	\item \textit{Sorting by Distribution}
 \end{enumerate}
 
+\newpage
 \section{Algorithms}
 
 This section describes algorithms represented in the program.
 
 \subsection{Insertion Sort}
 \label{sec:insertion}
-Insertion sorting algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element. Then, for each next step, we take the first item from the unsorted part of the array and insert it into the right place among the sorted items.
+Insertion Sort algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element. Then, for each item that we have in the unsorted part, we take element and insert it into the right place among the sorted items.
 
 \begin{figure}[H]
 \begin{center}
 	
 	\includegraphics[scale=0.7]{img/Insertion.png}
-	\caption{Insertion Sort at start: orange - sorted, blue - unsorted}\label{fig:insert}
+	\caption{Insertion Sort: sorted and unsorted parts at the beginning}\label{fig:insert}
 \end{center}
 \end{figure}
 
-In order to insert element into the right place in the sorted part, we compare the item from the unsorted part with each item from the sorted part in the direction from left to right. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right.
+In order to insert element into the right place in the sorted part, we compare each item from the unsorted part with each item from the sorted part in the direction from left to right. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right. Finally, when the right position is found, we insert an item into the sorted part.
 
 Complexity of Insertion Sort is $\Theta(n^2)$.
 
 \subsection{Selection Sort}
 \label{sec:selection}
 
-Selection Sort algorithm is based on the repeated selection. As well as in the \hyperref[sec:insertion]{Insertion Sort}, here we consider using sorted part and unsorted part.
+Selection Sort algorithm is based on the repeated selection. Here we consider finding minimal key from the unsorted part and swapping it with the first unsorted key. As well as in the \hyperref[sec:insertion]{Insertion Sort}, sorted part grows from the beginning of the sequence.
 
 Assume an array of items to sort. At the beginning of the sorting process unsorted part is represented by the whole array. Then, the first item of the unsorted part is set as the smallest key and is compared with the follow-up elements. When smaller item is found, it is set as a new smallest key. After the end of the array is reached the smallest item is swapped with the first element of the unsorted part and it becomes the sorted part of the array. This step is repeated till the array is sorted.
 
@@ -275,11 +276,19 @@ Complexity of this sorting algorithm is $\Theta(n^2)$.
 
 \subsection{Bubble Sort}
 \label{sec:bubble}
-Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. Algorithm works stepping through the all elements from left to right so the largest elements tend to move or "bubble" to the right. That is why the algorithm is called Bubble Sort.
+Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. The algorithm works stepping through all elements from left to right, so the largest elements tend to move or "bubble" to the right. That is why the algorithm is called Bubble Sort.
 
-Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items gets smaller by one till only two elements left. After this two elements are compared, the array is considered as sorted.
+Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items is decreased by one till only two elements left. After this two elements are compared and possibly swapped, the array is considered as sorted.
 
 Bubble Sort complexity is $\Theta(n^2)$.
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.7]{img/Bubblesort.png}
+	\caption{Bubble Sort in progress}\label{fig:bubble}
+\end{center}
+\end{figure}
 
 %add pic of bubblesort in action
 \subsection{Cocktail Sort}
@@ -376,9 +385,9 @@ Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$
 
 \subsection{Counting Sort} \label{sec:counting}
 
-Counting Sort is usually used for sorting keys in some range. Algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations.
+Counting Sort is usually used for sorting integer keys in the range from $0$ to $k$. Algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations. It means that the position of some key $x$ depends on the count of keys that are less than $x$.
 
-For better understanding let us have an example. Assume we have integers in range from $0$ to $k$ and empty output array. For this range we create helping array that will keep counters for each number from the range. Then all counters from the helping array are set to $0$. To obtain final positions for items to be sorted we need to make further computations. 
+For better understanding let us have an example. Assume we have integers in the range from $0$ to $k$ and an empty output array. For this range we create helping array that will keep counters for each number from the range. Then all counters from the helping array are set to $0$. To obtain final positions for items to be sorted we need to make further computations.
 
 Firstly, for each element from the initial array we increase the respective counter which is determined from the element value. That means value of the element is its counter position in the helping array. Secondly, we need to sum each counter with previous. Finally, for each item from the initial array the respective counter is decreased by one and the value of counter now is the final position, we move item to the output array.
 
@@ -416,9 +425,19 @@ Firstly, Bucket Sort distributes data to buckets. Then, there is need to sort ea
 \end{center}
 \end{figure}
 
+\newpage
 \section{Documentation}
 
+\newpage
 \section{User Guide}
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.34]{img/UI.png}
+	\caption{Main window}\label{fig:ui}
+\end{center}
+\end{figure}
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
 %% nastavený jazyk práce (nepovinným parametrem language makra
