@@ -49,6 +49,7 @@
   language=english,
 %  font=sans,
   glossaries,
+  theorems=false,
   index
 ]{kidiplom}
 
@@ -434,7 +435,9 @@ This section describes the structure of the program and some useful topics from 
 
 Nowadays exist a lot of programming languages, libraries, frameworks. On the one hand, a software developer has a wide choice. On the other hand, here comes up a new problem to make the right choice which should fit the best to the current task.
 
-The main programming language of the thesis software is Java. To be more precise, Java Platform, Standard Edition. 
+The main programming language of the thesis software is Java. To be more precise, Java Platform, Standard Edition 8. Java is an object-oriented language which is cross platform. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM} regardless the platform.
+
+The project was create in the NetBeans IDE.
 
 
 \newpage
@@ -542,7 +545,8 @@ nebo v souboru \texttt{readme.txt}.
 %% -------------------------------------------------------------------
 
 %% Sazba volitelného seznamu zkratek, za přílohami.
-%%\printglossary
+\printglossary
+
 
 %% Sazba povinné bibliografie, za přílohami (případně i za seznamem
 %% zkratek). Při použití BibLaTeXu použijte makro
@@ -564,6 +568,6 @@ nebo v souboru \texttt{readme.txt}.
 % \end{thebibliography}
 
 %% Sazba volitelného rejstříku, za bibliografií.
-\printindex
+%\printindex
 
 \end{document}

@@ -28,3 +28,34 @@ parent={},%
 %
 }%
 }%
+
+\ifglsentryexists{JVM}{}%
+{%
+\gls@defglossaryentry{JVM}%
+{%
+name={JVM},%
+sort={JVM},%
+type={acronym},%
+first={Java virtual machine (JVM)},%
+firstplural={Java virtual machines (JVMs)},%
+text={JVM},%
+plural={JVMs},%
+description={A virtual machine that enables a computer to run Java programs as well as programs written in other languages that are also compiled to Java bytecode.},%
+descriptionplural={},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Java virtual machine},%
+longplural={Java virtual machines},%
+short={JVM},%
+shortplural={JVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

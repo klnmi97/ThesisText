@@ -39,11 +39,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}User Guide}{14}{section.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{15}{section*.6}% 
+\contentsline {section}{Conclusions}{15}{section*.5}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{16}{section*.8}% 
+\contentsline {section}{Conclusions}{16}{section*.7}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
@@ -53,7 +53,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{17}{appendix.C}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{19}{section*.10}% 
+\contentsline {section}{Acronyms}{19}{section*.9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{20}{section*.12}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
