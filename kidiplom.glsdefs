@@ -59,3 +59,34 @@ parent={},%
 %
 }%
 }%
+
+\ifglsentryexists{CSS}{}%
+{%
+\gls@defglossaryentry{CSS}%
+{%
+name={CSS},%
+sort={CSS},%
+type={acronym},%
+first={Cascading Style Sheets (CSS)},%
+firstplural={Cascading Style Sheets (CSS)},%
+text={CSS},%
+plural={CSS},%
+description={A style sheet language.},%
+descriptionplural={},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Cascading Style Sheets},%
+longplural={Cascading Style Sheets},%
+short={CSS},%
+shortplural={CSS},%
+counter={page},%
+parent={},%
+%
+}%
+}%
