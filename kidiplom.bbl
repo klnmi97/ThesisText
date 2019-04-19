@@ -196,11 +196,13 @@
       \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{czech}
+      \field{subtitle}{část 1}
       \field{title}{Algoritmická matematika 1}
       \true{nocite}
       \verb{urlraw}
@@ -208,6 +210,39 @@
       \endverb
       \verb{url}
       \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-1.pdf
+      \endverb
+    \endentry
+    \entry{alm2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f4f3a283624071dae11afca958971e52}{%
+           family={Bělohlávek},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Katedra informatiky, Univerzita Palackeho v Olomouci}%
+      }
+      \strng{namehash}{f4f3a283624071dae11afca958971e52}
+      \strng{fullhash}{f4f3a283624071dae11afca958971e52}
+      \strng{bibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{czech}
+      \field{subtitle}{část 2}
+      \field{title}{Algoritmická matematika 1}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
+      \endverb
+      \verb{url}
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
       \endverb
     \endentry
     \entry{wiki}{online}{}

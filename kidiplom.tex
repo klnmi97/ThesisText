@@ -112,6 +112,11 @@
 \usepackage{bm}
 \usepackage{tikz}
 \usetikzlibrary{calc, positioning,fit,intersections}
+\usepackage{forest}
+\usepackage{caption}
+
+\definecolor{mygreenii}{RGB}{34,162,70}
+\definecolor{mygreeni}{RGB}{34,162,70}
 
 \begin{document}
 %% Sazba úvodních stran -- titulní, s bibliografickými údaji, s
@@ -447,8 +452,73 @@ The main programming language of the thesis software is Java. To be more precise
 
 As for the visual side of the application, Java provides a good JavaFX library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS} for styling some elements of the user interface.
 
-The project was created in the NetBeans IDE, although it can be easily opened in other IDEs.
+The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different screens and on the macOS. A version control system Git in connection with the GitHub was used. All the work on the project you may track on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
 
+\newpage
+\subsection{Structure}
+
+Program source codes are structured into packages:
+\begin{figure}[H]
+	\begin{flushleft}
+		\begin{forest}
+			for tree={
+    		font=\sffamily,
+    		text=white,
+    		text width=3.5cm,
+    		minimum height=0.5cm,
+    		if level=0
+    		  {fill=mygreenii}
+    		  {fill=mygreeni},
+    		rounded corners=4pt,
+    		grow'=0,
+    		child anchor=west,
+    		parent anchor=south,
+    		anchor=west,
+    		calign=first,
+    		edge={mygreenii,rounded corners,line width=1pt},
+    		edge path={
+    		  \noexpand\path [draw, \forestoption{edge}]
+    		  (!u.south west) +(7.5pt,0) |- (.child anchor)\forestoption{edge label};
+		    },
+    		before typesetting nodes={
+      		if n=1
+        		{insert before={[,phantom]}}
+        		{}
+    		},
+    		fit=band,
+    		s sep=10pt,
+    		before computing xy={l=15pt},
+  		}
+		[sortingvisualization
+		  [Constants]
+  		  [Controllers]
+		  [Data]
+		  [Enums]
+		  [NodeControllers]
+		  [UI]
+		  [Utilities]
+		  [Algorithms]
+		]
+		\end{forest}
+		%\captionsetup{justification=raggedright, singlelinecheck=false}
+		%\caption{Project structure}\label{fig:structure}
+	\end{flushleft}
+\end{figure}
+
+Each package contains certain classes, which are grouped by the purpose of use. Next subsections contain some general descriptions of the classes from packages. 
+\subsubsection{A root package}
+The root package contains only one class. It is MainUI.java. This class serves as the main class which starts the application. Although JavaFX provides the possibility of using XML-based language for creating a user interface, here it is not used. 
+
+The MainUI class defines main user interface elements and does the instantiating of controllers.
+
+\subsubsection{Constants, Data and Enum packages}
+All this three packages work with data and data structures although a bit differently.
+
+Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program.
+
+Data package contains classes which serve as definitions for data objects. BindingData class instance holds data for control buttons bindings. Results class defines object that is used for transferring results from the input dialog.
+
+Enum package contains one definition of the enum class. Algorithm enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
 
 \newpage
 \section{User Guide}

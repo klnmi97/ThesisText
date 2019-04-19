@@ -1,27 +1,27 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces $f(n)$ in $O(g(n))$}}{4}{figure.1}% 
+\contentsline {figure}{\numberline {1}{\ignorespaces $f(n)$ in $O(g(n))$\relax }}{4}{figure.caption.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning}}{6}{figure.2}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning\relax }}{6}{figure.caption.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Bubble Sort in progress}}{7}{figure.3}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Bubble Sort in progress\relax }}{7}{figure.caption.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Quick Sort principle}}{8}{figure.4}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Quick Sort principle\relax }}{8}{figure.caption.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Merge Sort principle}}{9}{figure.5}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Merge Sort principle\relax }}{9}{figure.caption.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Max-Heap}}{10}{figure.6}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Max-Heap\relax }}{10}{figure.caption.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Children positions in heap}}{10}{figure.7}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Children positions in heap\relax }}{10}{figure.caption.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Radix Sort example}}{11}{figure.8}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Radix Sort example\relax }}{11}{figure.caption.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Sort}}{12}{figure.9}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Sort\relax }}{12}{figure.caption.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Java}}{13}{figure.10}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Java\relax }}{13}{figure.caption.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Main window}}{14}{figure.11}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Main window\relax }}{16}{figure.caption.16}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
@@ -33,6 +33,8 @@
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {czech}{}
 \babel@toc {english}{}
 \babel@toc {czech}{}
 \babel@toc {english}{}
