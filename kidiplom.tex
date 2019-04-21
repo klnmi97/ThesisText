@@ -114,6 +114,7 @@
 \usetikzlibrary{calc, positioning,fit,intersections}
 \usepackage{forest}
 \usepackage{caption}
+\usepackage{subcaption}
 
 \definecolor{mygreenii}{RGB}{34,162,70}
 \definecolor{mygreeni}{RGB}{34,162,70}
@@ -455,7 +456,7 @@ As for the visual side of the application, Java provides a good JavaFX library w
 The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different screens and on the macOS. A version control system Git in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
 
 \newpage
-\subsection{Structure}
+\subsection{Structure overview}
 
 Program source codes are structured into packages:
 \begin{figure}[H]
@@ -524,15 +525,65 @@ NodeControllers package includes \textit{BrickNode.java, ColorInfoManager.java, 
 
 BrickNode class defines kind of representation of the key from the array. After instantiating it can be styled in many ways. This is done by the different node managers. We shall talk about them next. Before moving on, we describe node managers generally. These objects are responsive for creation a visual representation from the given data. Also, they may create some additional graphic items, e.g. buckets for the Bucket Sort. Node managers define animations for the certain types of nodes and define their own metric system for certain type of nodes.
 
-The first is \textit{DynamicNodes} class. It is a class that manages visual nodes whose height depends on their value.
+The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages visual nodes whose height depends on their value. Then, there is \textit{FixedNodes} class. This node manager class defines a manager that controls nodes of fixed size. Finally, there is \textit{Tree} node manager. \textit{Tree} represents manager that creates and controls a visual binary heap. 
+
+\begin{figure}[H]
+	\begin{subfigure}{0.31\textwidth}
+		\includegraphics[width=\linewidth]{img/dynamic.png}
+		\caption{Dynamic-size nodes} \label{fig:1a}
+	\end{subfigure}
+	\hspace*{\fill} % separation between the subfigures
+	\begin{subfigure}{0.31\textwidth}
+		\includegraphics[width=\linewidth]{img/fixed.png}
+		\caption{Fixed-size nodes} \label{fig:1b}
+	\end{subfigure}
+	\hspace*{\fill} % separation between the subfigures
+	\begin{subfigure}{0.31\textwidth}
+		\includegraphics[width=\linewidth]{img/tree.png}
+		\caption{Tree nodes} \label{fig:1c}
+	\end{subfigure}
+	\caption{Node types} \label{fig:1}
+\end{figure}
+
+\textit{Pseudocode} class, as it is clear from the title, defines a manager that controls the creation and animating of the pseudocode that appears on the information side panel. \textit{VariablesInfo}, in turn, defines another dynamic part of the information side panel, that shows current details during the visualization process and state of some variables. \textit{ColorInfoManager} represents information about the meaning of single colors of nodes. Usually, a description is shown for the dynamic type of nodes which tend to change their colors.
+
+\subsubsection{UI}
+UI or user interface package includes different additional classes that define additional parts of the graphic user interface. There are \textit{InfoDialog} which represents dialog that shows short descriptions of individual algorithms. \textit{InputDialog} instance accepts user input data. \textit{Toast} is a help message in Android OS style.
+
+\subsubsection{Utilities}
+The Utilities package contains different kinds of tools. \textit{ArrayUtils} is a supporting tool while working with an array. \textit{DescriptionReader} is a tool for reading algorithm description from a file. \textit{Scaling} class defines a tool that counts the scaling factor to fit different screens.
+
+\subsubsection{Algorithms}
+And the last, but not the least significant, package called Algorithms. It contains classes that actually do animating of the algorithms. Each class that creates animations is supposed to extend \textit{Sorting} class and implement the \textit{AbstractAlgorithm} interface. List of class definitions here corresponds to the list of algorithms in the \textit{Algorithm} enum.
+
+
 
 \newpage
 \section{User Guide}
 
+\subsection{System requirements}
+
+\noindent \textbf{Windows:}
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\noindent \textbf{Mac:}
+\begin{itemize}
+	\item
+\end{itemize}
+
+\noindent \textbf{Linux:}
+\begin{itemize}
+	\item
+\end{itemize}
+
+\subsection{User interface}
+
 \begin{figure}[H]
 \begin{center}
 	
-	\includegraphics[scale=0.34]{img/UI.png}
+	\includegraphics[width=\textwidth]{img/UI.png}
 	\caption{Main window}\label{fig:ui}
 \end{center}
 \end{figure}

@@ -37,7 +37,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Used technologies}{13}{subsection.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Structure}{14}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}Structure overview}{14}{subsection.3.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.1}A root package}{14}{subsubsection.3.2.1}% 
 \defcounter {refsection}{0}\relax 
@@ -47,25 +47,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.4}NodeControllers}{15}{subsubsection.3.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}User Guide}{16}{section.4}% 
+\contentsline {subsubsection}{\numberline {3.2.5}UI}{16}{subsubsection.3.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{17}{section*.17}% 
+\contentsline {subsubsection}{\numberline {3.2.6}Utilities}{16}{subsubsection.3.2.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.7}Algorithms}{16}{subsubsection.3.2.7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}User Guide}{17}{section.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}System requirements}{17}{subsection.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}User interface}{17}{subsection.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Conclusions}{18}{section*.18}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{18}{section*.19}% 
+\contentsline {section}{Conclusions}{19}{section*.20}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{19}{appendix.A}% 
+\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{20}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{19}{appendix.B}% 
+\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{20}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{19}{appendix.C}% 
+\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{20}{appendix.C}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Acronyms}{21}{section*.21}% 
+\contentsline {section}{Acronyms}{22}{section*.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{22}{section*.24}% 
+\contentsline {section}{References}{23}{section*.25}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
