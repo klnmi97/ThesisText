@@ -517,10 +517,10 @@ All these three packages work with data and data structures, although a bit diff
 
 Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program. Data package contains classes which serve as definitions for data objects. \textit{BindingData} class instance holds data for control buttons bindings. Results class defines object that is used for transferring results from the input dialog. Enum package contains one definition of the enum class. \textit{Algorithm} enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
 
-\subsubsection{Controllers}
+\subsubsection{Controllers package}
 The package has two Java class files: \textit{AnimationController.java} and \textit{ViewController.java}. The first one is responsible for the control of animations run. And the second one controls the graphic part of the application: creation the right graphic representation of array nodes, control of animation creation, pseudo code creation control. Both are used in the main class.
 
-\subsubsection{NodeControllers}
+\subsubsection{NodeControllers package}
 NodeControllers package includes \textit{BrickNode.java, ColorInfoManager.java, DynamicNodes.java, FixedNodes.java, Pseudocode.java, Tree.java and VariablesInfo.java}.
 
 BrickNode class defines kind of representation of the key from the array. After instantiating it can be styled in many ways. This is done by the different node managers. We shall talk about them next. Before moving on, we describe node managers generally. These objects are responsive for creation a visual representation from the given data. Also, they may create some additional graphic items, e.g. buckets for the Bucket Sort. Node managers define animations for the certain types of nodes and define their own metric system for certain type of nodes.
@@ -547,38 +547,53 @@ The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages v
 
 \textit{Pseudocode} class, as it is clear from the title, defines a manager that controls the creation and animating of the pseudocode that appears on the information side panel. \textit{VariablesInfo}, in turn, defines another dynamic part of the information side panel, that shows current details during the visualization process and state of some variables. \textit{ColorInfoManager} represents information about the meaning of single colors of nodes. Usually, a description is shown for the dynamic type of nodes which tend to change their colors.
 
-\subsubsection{UI}
+\subsubsection{UI package}
 UI or user interface package includes different additional classes that define additional parts of the graphic user interface. There are \textit{InfoDialog} which represents dialog that shows short descriptions of individual algorithms. \textit{InputDialog} instance accepts user input data. \textit{Toast} is a help message in Android OS style.
 
-\subsubsection{Utilities}
+\subsubsection{Utilities package}
 The Utilities package contains different kinds of tools. \textit{ArrayUtils} is a supporting tool while working with an array. \textit{DescriptionReader} is a tool for reading algorithm description from a file. \textit{Scaling} class defines a tool that counts the scaling factor to fit different screens.
 
-\subsubsection{Algorithms}
+\subsubsection{Algorithms package}
 And the last, but not the least significant, package called Algorithms. It contains classes that actually do animating of the algorithms. Each class that creates animations is supposed to extend \textit{Sorting} class and implement the \textit{AbstractAlgorithm} interface. List of class definitions here corresponds to the list of algorithms in the \textit{Algorithm} enum.
 
+\subsubsection{Resources}
+Apart from the source code packages, project has a resource folder inside. This folder contains images that are used in the program: icons, button images. Also, it includes \Gls{CSS} files that are used for the styling of the main window (style.css) and of the input dialog (dialog.css).
 
+In the resource folder exists a subfolder that stores files with descriptions of the algorithms. File names here correspond to the long names from the \textit{Algorithm} enum without spaces. Such name conventions help the reader tool to find the right description.
 
 \newpage
 \section{User Guide}
 
 \subsection{System requirements}
 
-\noindent \textbf{Windows:}
+Since Java is cross-platform, you may use the application with the most popular PC operating systems. Here are given minimal system requirements for several operating systems.
+
+\noindent \textbf{Requirements:}
 \begin{itemize}
-	\item 
+	\item Operating system: minimum Windows XP SP3 or Mac OS X 10.4.10 or Ubuntu 8.04 
+	\item Java: Java SE 8 with minimum update 40 (8u40)
+	\item Processor: Dual-Core processor, 1.8 GHz
+	\item Memory: 512MB of RAM (1GB recommended)
 \end{itemize}
 
-\noindent \textbf{Mac:}
-\begin{itemize}
-	\item
-\end{itemize}
+\subsection{Starting application}
 
-\noindent \textbf{Linux:}
-\begin{itemize}
-	\item
-\end{itemize}
+Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK or JRE installed and configured. In case it is already done, just run the file of the application with \textit{.jar} extension.
+
+Also, it is possible to use option "Open with". Here is necessary to select the right application. For example, in the Windows operating system it is usually "Java(TM) Platform SE binary" or \textit{javaw.exe}.
+
+Next opportunity is to run it through the command line. For Windows and macOS it is done the same way. Type the command from below and add the right path to the file. 
+\begin{lstlisting}
+java -jar Sorting-Visualization.jar
+\end{lstlisting}
+
+Just after running the application, it is ready to use.
 
 \subsection{User interface}
+
+As it was stated above, the main aim of the application is to be as much user-friendly as possible. This part describes the user interface of the application and main actions that are available to a user.
+
+Main window (Figure \ref{fig:ui}) consists of the visualization panel(1), information panel(2), control panel(3) and upper panel(4).
 
 \begin{figure}[H]
 \begin{center}
@@ -587,6 +602,75 @@ And the last, but not the least significant, package called Algorithms. It conta
 	\caption{Main window}\label{fig:ui}
 \end{center}
 \end{figure}
+
+\subsubsection{Visualization panel}
+Visualization panel(Figure \ref{fig:vispanel}) is the main tool for the visualization of algorithms. It shows different types of nodes which represent array items. Animated movements of these nodes represent individual steps of a sorting algorithm. 
+
+For some algorithms there is information about node colors available. It is located in the bottom left corner.
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.4]{img/ui/Vispanel.png}
+	\caption{Visualization panel}\label{fig:vispanel}
+\end{center}
+\end{figure}
+
+\subsubsection{Control panel}
+
+Control panel gives a user the possibility to have full control over the algorithm visualization process. If you do not understand what the exact button means, hover the mouse cursor over some active button and you will see a tip.
+
+Buttons and other action elements on the panel (Figure \ref{fig:controls}, from left to right) are "Reset", "Animation speed slider", "To beginning", "Go step back", "Play", "Pause", "Go step forth", "To end", "New" and "Info".
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.5]{img/ui/Controls.png}
+	\caption{Visualization panel}\label{fig:controls}
+\end{center}
+\end{figure}
+
+"Reset" action creates a new sorting visualization of the current algorithm with a randomly generated array. "New" action allows a user possibility to enter custom data. "Info" opens a window with a description of the current algorithm.
+
+\subsubsection{Information panel}
+
+The information panel(Figure \ref{fig:infopanel}) is located on the right side of the window. It consists of the header with the name of the current algorithm, the pseudocode of the selected algorithm and description of the current state during visualization.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.4]{img/ui/Infopanel.png}
+	\caption{Information panel}\label{fig:infopanel}
+\end{center}
+\end{figure}
+
+When the window is resized and the information panel does not fit, it becomes scrolable. It is possible to hide this panel by clicking on it. In order to restore the panel, use the button with arrow which is located on the place of the side panel.
+
+\subsubsection{Upper panel}
+The upper panel includes selector of the algorithms. To see the list of available algorithms click on the "Algorithms" (Figure \ref{fig:selector}).
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.3]{img/ui/Selector.png}
+	\caption{Algorithm selector}\label{fig:selector}
+\end{center}
+\end{figure}
+
+\subsubsection{Starting new visualization}
+To start a new visualization, there are some options. You may either start it by selecting an algorithm from the algorithm selector on the upper panel or click "Reset" to initialize new visualization of the current algorithm with random data. Finally, a user can initialize new visualization with custom data.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.5]{img/ui/WindowNew.png}
+	\caption{Window "New sorting"}\label{fig:new}
+\end{center}
+\end{figure}
+
+To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window(Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma.
+
+\subsubsection{Visualization control}
+
+After setting up a new visualization, it is easy to control sorting visualization flow.
+
+\subsection{Keyboard shortcuts}
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
 %% nastavený jazyk práce (nepovinným parametrem language makra
