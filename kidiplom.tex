@@ -404,9 +404,9 @@ Worst case complexity for Counting Sort is $\Theta(k + n)$, where $k$ is number 
 
 The Radix sorting algorithm is based on the idea of using separate digits to determine final number positions. It works with the help of some stable sorting algorithm, it can be for example \hyperref[sec:counting]{Counting Sort}, taking digits one by one from least significant to most significant.
 
-For better understanding let us go to the details. Assume the array of integers. Let $d$ be the number of digits of the largest item from the array. If there are numbers from the array that have less digits than the $d$ is, then insufficient digits are counted as digits with zero values.
+For better understanding let us go to the details. Assume the array of integers. Let $d$ be the number of digits of the largest item from the array. If there are numbers from the array that have less count of digits than the $d$ is, then insufficient digits are counted as digits with zero values.
 
-This way, for each digit from least significant to most we sort the input array according to the current digit. Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
+This way, for each digit from least significant to most we sort the input array according to the current digit(Figure \ref{fig:radixsort}). Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
 
 \begin{figure}[H]
 \begin{center}
@@ -428,7 +428,7 @@ Firstly, Bucket Sort distributes data to buckets. Then, there is need to sort ea
 \begin{center}
 	
 	\includegraphics[scale=0.5]{img/Bucketsort.png}
-	\caption{Bucket Sort}\label{fig:radixsort}
+	\caption{Bucket Sort}\label{fig:bucketsort}
 \end{center}
 \end{figure}
 
@@ -566,23 +566,23 @@ In the resource folder exists a subfolder that stores files with descriptions of
 
 \subsection{System requirements}
 
-Since Java is cross-platform, you may use the application with the most popular PC operating systems. Here are given minimal system requirements for several operating systems.
+Since Java is cross-platform, you may use the application within the most popular PC operating systems where Java is supported. Here are given minimal system requirements for several operating systems.
 
 \noindent \textbf{Requirements:}
 \begin{itemize}
 	\item Operating system: minimum Windows XP SP3 or Mac OS X 10.4.10 or Ubuntu 8.04 
-	\item Java: Java SE 8 with minimum update 40 (8u40)
+	\item Java: Java SE 8 with minimum update 40 (8u40) or update 51 (8u51) in case of Windows 10 operating system
 	\item Processor: Dual-Core processor, 1.8 GHz
 	\item Memory: 512MB of RAM (1GB recommended)
 \end{itemize}
 
 \subsection{Starting application}
 
-Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK or JRE installed and configured. In case it is already done, just run the file of the application with \textit{.jar} extension.
+Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK or JRE installed and configured. In case it is already done, it is enough to run the file of the application with \textit{.jar} extension as simple application.
 
 Also, it is possible to use option "Open with". Here is necessary to select the right application. For example, in the Windows operating system it is usually "Java(TM) Platform SE binary" or \textit{javaw.exe}.
 
-Next opportunity is to run it through the command line. For Windows and macOS it is done the same way. Type the command from below and add the right path to the file. 
+Next opportunity is to run it through the command line. For Windows and macOS it is done the same way. Type the command from below and add the right path before the file name. 
 \begin{lstlisting}
 java -jar Sorting-Visualization.jar
 \end{lstlisting}
@@ -604,9 +604,9 @@ Main window (Figure \ref{fig:ui}) consists of the visualization panel(1), inform
 \end{figure}
 
 \subsubsection{Visualization panel}
-Visualization panel(Figure \ref{fig:vispanel}) is the main tool for the visualization of algorithms. It shows different types of nodes which represent array items. Animated movements of these nodes represent individual steps of a sorting algorithm. 
+Visualization panel(Figure \ref{fig:vispanel}) is the main space for the visualization of algorithms. It shows different types of nodes which represent array items. Animated movements of these nodes show individual steps of a sorting algorithm. 
 
-For some algorithms there is information about node colors available. It is located in the bottom left corner.
+For some algorithms, there is a description of the node colors available. It is located in the bottom left corner.
 
 \begin{figure}[H]
 \begin{center}
@@ -618,9 +618,9 @@ For some algorithms there is information about node colors available. It is loca
 
 \subsubsection{Control panel}
 
-Control panel gives a user the possibility to have full control over the algorithm visualization process. If you do not understand what the exact button means, hover the mouse cursor over some active button and you will see a tip.
+Control panel gives a user the possibility to have full control over the algorithm visualization process. It is possible to run visualization, to pause it, even to go through step by step forth and back. If you do not understand what the exact button means, hover the mouse cursor over some active button and you will see a tip.
 
-Buttons and other action elements on the panel (Figure \ref{fig:controls}, from left to right) are "Reset", "Animation speed slider", "To beginning", "Go step back", "Play", "Pause", "Go step forth", "To end", "New" and "Info".
+Buttons and other interactive elements on the panel (Figure \ref{fig:controls}, from left to right) are "Reset", "Animation speed slider", "Go to start", "Step back", "Play", "Pause", "Step forth", "Go to end", "New" and "Info".
 
 \begin{figure}[H]
 \begin{center}
@@ -654,6 +654,10 @@ The upper panel includes selector of the algorithms. To see the list of availabl
 \end{center}
 \end{figure}
 
+\subsection{Interaction}
+
+This section describes possible interactions between user and application.
+
 \subsubsection{Starting new visualization}
 To start a new visualization, there are some options. You may either start it by selecting an algorithm from the algorithm selector on the upper panel or click "Reset" to initialize new visualization of the current algorithm with random data. Finally, a user can initialize new visualization with custom data.
 
@@ -669,6 +673,18 @@ To initialize new visualization with custom data, click the "NEW" button. After 
 \subsubsection{Visualization control}
 
 After setting up a new visualization, it is easy to control sorting visualization flow.
+
+To run sorting visualization click on the "Play" button or press \textbf{R} key. "Play" button may not be available in case visualization is already running or is finished. Also, "Play" button resumes sorting process after it was paused.
+
+The process is paused by pressing "Pause" button.
+
+Stepping through the sorting process is performed by two buttons. Step back action is done by clicking the "Step Back" button, which is to the left of the "Play" button. Step forth is made by clicking the "Step Forth" button, which is to the right of the "Pause" button. Both actions are not possible during sorting is running.
+
+In addition, there are buttons that allow go to the beginning and to the end. "Go to start" returns sorting in the initial state. "Go to end" action is intended to fast-forward visualization to the "sorted" state.
+
+\subsubsection{Escaping application}
+
+Close application by clicking exit button. Its location depends on the operating system.
 
 \subsection{Keyboard shortcuts}
 
