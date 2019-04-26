@@ -163,7 +163,7 @@
            giveni={R\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Praha, Softpress}%
+        {Addison-Wesley}%
       }
       \strng{namehash}{dab426883b0c224b023b40469d97bd9b}
       \strng{fullhash}{dab426883b0c224b023b40469d97bd9b}
@@ -175,8 +175,11 @@
       \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Algoritmy v C: základy, datové struktury, třídění, vyhledávání}
-      \field{year}{2003}
+      \field{edition}{Third Edition}
+      \field{isbn}{0-201-31452-5}
+      \field{subtitle}{Fundamentals, data structures, sorting, searching}
+      \field{title}{Algorithms in C}
+      \field{year}{2007}
       \true{nocite}
     \endentry
     \entry{alm1}{book}{}

@@ -3,37 +3,39 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces $f(n)$ in $O(g(n))$\relax }}{4}{figure.caption.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning\relax }}{6}{figure.caption.6}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning\relax }}{7}{figure.caption.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Bubble Sort in progress\relax }}{7}{figure.caption.7}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Bubble Sort in progress\relax }}{8}{figure.caption.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Quick Sort principle\relax }}{8}{figure.caption.8}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Quick Sort principle\relax }}{9}{figure.caption.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Merge Sort principle\relax }}{9}{figure.caption.9}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Merge Sort principle\relax }}{10}{figure.caption.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Max-Heap\relax }}{10}{figure.caption.10}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Max-Heap\relax }}{11}{figure.caption.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Children positions in heap\relax }}{10}{figure.caption.11}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Children positions in heap\relax }}{11}{figure.caption.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Radix Sort example\relax }}{11}{figure.caption.12}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Radix Sort example\relax }}{12}{figure.caption.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Sort\relax }}{12}{figure.caption.13}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Bucket Sort\relax }}{13}{figure.caption.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Java\relax }}{13}{figure.caption.14}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Java\relax }}{14}{figure.caption.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Node types\relax }}{15}{figure.caption.16}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Node types\relax }}{16}{figure.caption.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Main window\relax }}{18}{figure.caption.17}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces Main window\relax }}{19}{figure.caption.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces Visualization panel\relax }}{18}{figure.caption.18}% 
+\contentsline {figure}{\numberline {13}{\ignorespaces Visualization panel\relax }}{19}{figure.caption.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Visualization panel\relax }}{19}{figure.caption.19}% 
+\contentsline {figure}{\numberline {14}{\ignorespaces Visualization panel\relax }}{20}{figure.caption.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces Information panel\relax }}{19}{figure.caption.20}% 
+\contentsline {figure}{\numberline {15}{\ignorespaces Information panel\relax }}{20}{figure.caption.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces Algorithm selector\relax }}{20}{figure.caption.21}% 
+\contentsline {figure}{\numberline {16}{\ignorespaces Algorithm selector\relax }}{21}{figure.caption.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces Window "New sorting"\relax }}{20}{figure.caption.22}% 
+\contentsline {figure}{\numberline {17}{\ignorespaces Window "New sorting"\relax }}{21}{figure.caption.22}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Window "Description window"\relax }}{22}{figure.caption.23}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}

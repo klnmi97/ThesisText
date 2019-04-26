@@ -178,6 +178,19 @@ Here is more precise definition by Thomas Cormen: "Informally, an algorithm is a
 
 \subsection{Types of algorithms}
 
+Nowadays there exists a large number of different algorithms. They are divided into different groups by different criteria. Often one algorithm may belong to several groups. Here are some of them.
+
+\begin{itemize}
+	\item \textit{Recursive algorithms} - algorithms that call itself until the limiting condition is reached.
+	\item \textit{Probabilistic algorithms} - algorithms that make some random decisions.
+	\item \textit{Parallel algorithms} - algorithms that divide a task, for example, into threads or between processors etc.
+	\item \textit{Sequential algorithms} - unlike the parallel algorithms, every step of the task is done in sequence.
+	\item \textit{Divide and conquer} - algorithms that divide a problem into smaller parts until they become indivisible. Then merge solutions in some way.
+	\item \textit{Greedy algorithms} - these algorithms make the best choice in a given situation. They never change their previous choice.
+	\item \textit{Dynamic programming} - algorithms that start solving a problem from the simplest to more complicated parts. They use outcomes from previous solutions.
+	\item \textit{Heuristic algorithms} - algorithm which is used for finding solution among all possible. However, there is no guarantee that a found one will be the best.
+\end{itemize}
+
 \subsection{Complexity}
 
 Frequently happen situations when we need to know the performance of some algorithm. There might be a necessity to compare performance of some algorithms, for example. Or we might need to know the time for an algorithm to run with some input. And here we are moving to the concept of the algorithm complexity.
@@ -193,10 +206,12 @@ To be more clear, let us have an example. $f(n) = 5n^3 + 10n^2 + 20n + 4$, the h
 For such approximation there exists \textbf{O notation}:
 
 \begin{enumerate}
-	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity.
-	\item \textit{Asymptotic lower bound}(or $\Omega$). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity.
+	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$. %???
+	\item \textit{Asymptotic lower bound}(or $\Omega$). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
 	\item \textit{Asymptotic tight bound}(or $\Theta$). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
 \end{enumerate}
+
+All the functions that we have here we will assume to take only non-negative values.
 
 Also, there is a \textit{small-o} notation. It slightly differs from the \textit{Big-O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
 
@@ -238,17 +253,17 @@ Ascending order means that items in a sequence are arranged from the smallest to
 \\\\
 Sorting algorithms are divided into two main types:
 \begin{enumerate}
-	\item \textit{Algorithms of internal sorting} - all the data to sort is stored in the internal memory during the sorting process. 
+	\item \textit{Algorithms of internal sorting} - all the data to sort is stored in the internal memory during the sorting process. It is used when the amount of data to sort is known.
 	\item \textit{Algorithms of external sorting} - all the data to sort is stored outside the internal memory (e.g. on a hard disk) and is loaded to the internal memory by small parts.
 \end{enumerate}
 
 Here, in the text, we are talking only about the algorithms of internal sorting. Talking about the algorithms of the internal sorting, here are five main techniques which are usually used\cite{knuth3}:
 \begin{enumerate}
-	\item \textit{Sorting by Insertion}
-	\item \textit{Sorting by Exchanging}
-	\item \textit{Sorting by Selection}
-	\item \textit{Sorting by Merging}
-	\item \textit{Sorting by Distribution}
+	\item \textit{Sorting by Insertion} - single items from the sequence are put into the right place of the sorted part.
+	\item \textit{Sorting by Exchanging} - swap elements of each pair that are out of order till no more such pairs exist.
+	\item \textit{Sorting by Selection} - method that uses repeated selection.
+	\item \textit{Sorting by Merging} - merging smaller parts with the right order.
+	\item \textit{Sorting by Distribution} - technique which does not use comparisons to sort. It works relying on the knowledge about the set from where data to sort is taken. Data is distributed to some intermediate structures according to values. %%rly?
 \end{enumerate}
 
 \newpage
@@ -545,6 +560,7 @@ The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages v
 	\caption{Node types} \label{fig:1}
 \end{figure}
 
+%%add about pseudocode
 \textit{Pseudocode} class, as it is clear from the title, defines a manager that controls the creation and animating of the pseudocode that appears on the information side panel. \textit{VariablesInfo}, in turn, defines another dynamic part of the information side panel, that shows current details during the visualization process and state of some variables. \textit{ColorInfoManager} represents information about the meaning of single colors of nodes. Usually, a description is shown for the dynamic type of nodes which tend to change their colors.
 
 \subsubsection{UI package}
@@ -587,11 +603,11 @@ Next opportunity is to run it through the command line. For Windows and macOS it
 java -jar Sorting-Visualization.jar
 \end{lstlisting}
 
-Just after running the application, it is ready to use.
+Just after running the application, the main window(Figure \ref{fig:ui}) shows up and the application is ready to use.
 
 \subsection{User interface}
 
-As it was stated above, the main aim of the application is to be as much user-friendly as possible. This part describes the user interface of the application and main actions that are available to a user.
+As it was stated above, the main aim of the application is to be as much user-friendly as possible. This part describes the user interface of the application.
 
 Main window (Figure \ref{fig:ui}) consists of the visualization panel(1), information panel(2), control panel(3) and upper panel(4).
 
@@ -682,11 +698,35 @@ Stepping through the sorting process is performed by two buttons. Step back acti
 
 In addition, there are buttons that allow go to the beginning and to the end. "Go to start" returns sorting in the initial state. "Go to end" action is intended to fast-forward visualization to the "sorted" state.
 
+\subsubsection{Opening description}
+
+There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F1}. Then a window with the short description will show up(Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.9]{img/ui/WindowDescription.png}
+	\caption{Window "Description window"}\label{fig:desc}
+\end{center}
+\end{figure}
+
 \subsubsection{Escaping application}
 
 Close application by clicking exit button. Its location depends on the operating system.
 
 \subsection{Keyboard shortcuts}
+
+\begin{table}[H]
+	\begin{tabular}{||l|l|l||}
+	\hline
+	\textbf{Action} & \textbf{Windows} & \textbf{macOS}\\
+	\hline
+	Run visualization & R & R\\
+	\hline
+	Close application & Esc & Esc\\
+	\hline
+	
+	\end{tabular}
+\end{table}
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
 %% nastavený jazyk práce (nepovinným parametrem language makra
