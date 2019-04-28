@@ -50,6 +50,7 @@
 %  font=sans,
   glossaries,
   theorems=false,
+  sourcecodes=false,
   index
 ]{kidiplom}
 
@@ -85,7 +86,7 @@
 %% práce). Jeden odstavec!
 \annotation[czech]{Cílem práce bylo vytvořit software pro podporu výuky třídících algoritmů pomocí vizualizace průběhu třídění nejznámějšími algoritmy a jejich variantami. Program byl vytvořen s podporou názorné vizualizaci vybraných algoritmů na zadaném či vygenerovaném vstupním poli a krokování průběhu výpočtu se souběžným zobrazením pseudokódu použitého algoritmu a aktuálních hodnot použitých proměnných.}
 
-\annotation[english]{The main goal of the thesis was to create a learning support software with visualization of the most known sorting algorithms and their variations. The application has to support a graphic visualization of selected algorithms on randomly generated or manually created array, step-by-step execution possibility, pseudocode and current state of variables.}
+\annotation[english]{The main goal of the thesis was to create a teaching support software with visualization of the most known sorting algorithms and their variations. The application has to support a graphic visualization of selected algorithms on randomly generated or manually created array, step-by-step execution possibility, pseudocode and current state of variables.}
 
 %% Klíčová slova práce, včetně anglických. Oddělená (obvykle) středníkem.
 \keywords[czech]{třídící algoritmus; třídění; vizualizace; program}
@@ -108,7 +109,9 @@
 %% Další dodatečné styly (balíky) potřebné pro sazbu vlastního textu
 %% práce.
 \usepackage{lipsum}
+\usepackage{amsmath}
 \usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 \usepackage{bm}
 \usepackage{tikz}
 \usetikzlibrary{calc, positioning,fit,intersections}
@@ -119,6 +122,7 @@
 
 \definecolor{mygreenii}{RGB}{34,162,70}
 \definecolor{mygreeni}{RGB}{34,162,70}
+
 
 %%flowchart definitions
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=white!30] %red
@@ -196,27 +200,28 @@ It is possible to describe algorithm in several ways.
 	\item \textit{Visual representation}. An algorithm may be described by many other methods, including graphical representation like flowcharts(Figure \ref{fig:flowchart}).
 \end{itemize}
 
+As an example, we will consider the algorithm for finding factorial representing it in pseudocode and by the flowchart(Figure \ref{fig:flowchart}).
 
 \begin{figure}[H]
 	\begin{center}
 		\begin{tikzpicture}[node distance=2cm]
 			\node (start) [startstop] {Start};
-			\node (read) [io, below of=start] {Read n};
-			\node (setup) [process, below of=read] {i = 1, fact = 1};
-			\node (cycle) [decision, below of=setup, yshift=-0.5cm] {i <= n};
-			\node (print) [io, right of=cycle, xshift=2cm] {Print fact};
-			\node (fact) [process, below of=cycle, yshift=-0.5cm] {fact = fact * i};
-			\node (i) [process, left of=fact, xshift=-2cm] {i = i + 1};
-			\node(end) [process, below of=print, yshift=-0.5cm] {end};		
+			\node (read) [io, below of=start] {Read $n$};
+			\node (setup) [process, below of=read] {$i = 1, fact = 1$};
+			\node (cycle) [decision, below of=setup] {$i \leq n$};
+			\node (print) [io, right of=cycle, xshift=2cm] {Print $fact$};
+			\node (fact) [process, below of=cycle] {$fact = fact * i$};
+			\node (i) [process, left of=fact, xshift=-2cm] {$i = i + 1$};
+			\node(end) [process, below of=print] {end};		
 			
 			%arrows
 			\draw [arrow] (start) -- (read);
 			\draw [arrow] (read) -- (setup);
 			\draw [arrow] (setup) -- (cycle);
-			\draw [arrow] (cycle) -- node {no} (print);
-			\draw [arrow] (cycle) -- node {yes} (fact);
+			\draw [arrow] (cycle) -- node[anchor=south] {no} (print);
+			\draw [arrow] (cycle) -- node[anchor=east] {yes} (fact);
 			\draw [arrow] (fact) -- (i);
-			\draw [arrow] (i) -- +(0, 2.5) -- (cycle);
+			\draw [arrow] (i) -- +(0, 2) -- (cycle);
 			\draw [arrow] (print) -- (end);
 			
 		\end{tikzpicture}
@@ -224,6 +229,19 @@ It is possible to describe algorithm in several ways.
 	\caption{Flowchart example: factorial}\label{fig:flowchart}
 \end{figure}
 
+
+\begin{algorithm}[H]
+\caption{Factorial algorithm}\label{fact}
+\begin{algorithmic}[1]
+\Procedure{Factorial}{n}
+\State $\textit{fact} \gets 1$
+\For{ $ i \gets 1 \text{ to } n$} 
+	\State $fact \gets fact * i$
+\EndFor
+\Return $fact$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 \subsection{Types of algorithms}
 
@@ -306,7 +324,7 @@ Sorting algorithms are divided into two main types:
 	\item \textit{Algorithms of external sorting} - all the data to sort is stored outside the internal memory (e.g. on a hard disk) and is loaded to the internal memory by small parts.
 \end{enumerate}
 
-Here, in the text, we are talking only about the algorithms of internal sorting. Talking about the algorithms of the internal sorting, here are five main techniques which are usually used\cite{knuth3}:
+Here, in the text, we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used\cite{knuth3}:
 \begin{enumerate}
 	\item \textit{Sorting by Insertion} - single items from the sequence are put into the right place of the sorted part.
 	\item \textit{Sorting by Exchanging} - swap elements of each pair that are out of order till no more such pairs exist.
@@ -332,7 +350,7 @@ Insertion Sort algorithm has a simple idea. Assume an array with items to be sor
 \end{center}
 \end{figure}
 
-In order to insert element into the right place in the sorted part, we compare each item from the unsorted part with each item from the sorted part in the direction from left to right. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right. Finally, when the right position is found, we insert an item into the sorted part.
+In order to insert element into the right place in the sorted part, we compare selected item from the unsorted part with each item from the sorted part in the direction from left to right. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right. Finally, when the right position is found, we insert an item into the sorted part.
 
 Complexity of Insertion Sort is $\Theta(n^2)$.
 
@@ -364,11 +382,13 @@ Bubble Sort complexity is $\Theta(n^2)$.
 %add pic of bubblesort in action
 \subsection{Cocktail Sort}
 
-Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
+Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to the Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
 
 Assume array that needs to be sorted in ascending order. Above we described Bubble Sort and this algorithm has a significant problem. It iterates through array only in one direction. This way, smaller items which are closer to the end of array reach its right positions slowly.
 
-Solution is to make Bubble Sort iterate left-to-right and right-to-left. Cocktail Sort uses two cycles inside a big one:
+The solution is to make Bubble Sort iterate left-to-right and right-to-left. Cocktail Sort uses two cycles inside a big one. Here $a$ and $b$ are the positions of the leftmost and the rightmost elements of the array.
+
+The way the algorithm works:
 
 \begin{enumerate}
  \item Iterate from $a$ to $b$, compare adjacent elements and swap if they are not ordered.
@@ -382,7 +402,7 @@ Cocktail Sort works better than \hyperref[sec:bubble]{Bubble Sort} in some situa
 
 Quick Sort works on the principle "divide and conquer". It recursively applies itself on smaller parts of array until it is not sorted.
 
-Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item also known as pivot is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
+Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item, also known as pivot, is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
 
 This way, it is enough to apply Quick Sort on each part of array not including pivot until array is not sorted.
 
@@ -396,13 +416,13 @@ This way, it is enough to apply Quick Sort on each part of array not including p
 
 There are several methods of partitioning of array into two parts, here I want to describe one that is demonstrated in the software part of this work.
 
-Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the last item and index is the first. Next each item of array except pivot is compared with the pivot. If current item is lesser or equal to pivot, it is swapped with the index item, next in order item becomes index. Finally, index and pivot are swapped and this way pivot is on its final position.
+Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the rightmost item and index is the first. Next, each item of the array except pivot is compared with the pivot. If a current item is lesser or equal to the pivot, it is swapped with the index item, next in order item becomes an index. Finally, index and pivot are swapped and this way pivot is on its final position.
 
 Quick Sort is counted as an effective algorithm because its average complexity is $\Theta(n \log n)$. However, when array is maximally unbalanced it may show worst performance. Worst case complexity is $\Theta(n^2)$.
 
 \subsection{Merge Sort}
 
-Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer". The logic of it is simple: recursively divide data into two parts till it becomes indivisible then merge parts back.
+Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer". The logic of it is simple: recursively divide data into two halves till it becomes indivisible then merge parts back.
 
 Merge procedure itself takes items from each previously divided part one by one, compares them and moves the smallest to the output, repeats previous step.
 
@@ -418,7 +438,7 @@ Merge Sort complexity is $\Theta(n \log n)$
 
 \subsection{Heap Sort}
 
-Heap Sort is a selection based algorithm and it offers another interesting approach to sorting. In comparison with the \hyperref[sec:selection]{Selection Sort} it has optimized selection by using binary heap data structure. 
+Heap Sort is a selection based algorithm and it offers another interesting approach to sorting. In comparison with the \hyperref[sec:selection]{Selection Sort} it has optimized selection by using binary heap data structure.
 
 Binary heap is a complete binary tree; it means that all levels of tree, except the last one, must be completely filled with nodes. Also, this data structure satisfies the \textit{heap condition}: each node key is greater than or equal to its child keys (this heap type is called \textit{max-heap}).
 
@@ -448,25 +468,25 @@ Binary heap may be implemented by simple array. Item at position zero is a root 
  \item Repeat steps \ref{itm:step2} and \ref{itm:step3} until the range of array is one
 \end{enumerate}
 
-To build \textit{max-heap} from current node we need to assure that right and left child comprise max-heaps. This way, in the first step procedure for building max-heap is recursively applied for each node that has at least one child from bottom to top.
+To build \textit{max-heap} from current node we need to assure that right and left children comprise max-heaps. This way, in the first step procedure for building max-heap is recursively applied for each node that has at least one child from bottom to top.
 
-After each swap of the root node and the node at last considered position last node takes its final place. This way it joins the sorted part of array.
+After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array.
 
 Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
 
 \subsection{Counting Sort} \label{sec:counting}
 
-Counting Sort is usually used for sorting integer keys in the range from $0$ to $k$. Algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations. It means that the position of some key $x$ depends on the count of keys that are less than $x$.
+Counting Sort is usually used for sorting integer keys in the range from $0$ to $k$. The algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations. It means that the position of some key $x$ depends on the count of keys that are less than $x$.
 
-For better understanding let us have an example. Assume we have integers in the range from $0$ to $k$ and an empty output array. For this range we create helping array that will keep counters for each number from the range. Then all counters from the helping array are set to $0$. To obtain final positions for items to be sorted we need to make further computations.
+For better understanding let us have an example. Assume we have integers in the range from $0$ to $k$ and an empty output array. For this range, we create helping array that will keep counters for each number from the range. Then all counters from the helping array are set to $0$. To obtain final positions for items to be sorted we need to make further computations.
 
-Firstly, for each element from the initial array we increase the respective counter which is determined from the element value. That means value of the element is its counter position in the helping array. Secondly, we need to sum each counter with previous. Finally, for each item from the initial array the respective counter is decreased by one and the value of counter now is the final position, we move item to the output array.
+Firstly, for each element from the initial array, we increase the respective counter which is determined from the element value. That means the value of the element is its counter position in the helping array. Secondly, we need to sum each counter with previous. Finally, for each item from the initial array, the respective counter is decreased by one, and the value of counter now is the final position, we move the item to the output array.
 
 Worst case complexity for Counting Sort is $\Theta(k + n)$, where $k$ is number of items in range and $n$ is size of array to be sorted.
 
 \subsection{Radix Sort}
 
-The Radix sorting algorithm is based on the idea of using separate digits to determine final number positions. It works with the help of some stable sorting algorithm, it can be for example \hyperref[sec:counting]{Counting Sort}, taking digits one by one from least significant to most significant.
+The Radix sorting algorithm is based on the idea of using separate digits to determine final number positions. It works with the help of some stable sorting algorithm, for example \hyperref[sec:counting]{Counting Sort}, taking digits one by one from least significant to most significant.
 
 For better understanding let us go to the details. Assume the array of integers. Let $d$ be the number of digits of the largest item from the array. If there are numbers from the array that have less count of digits than the $d$ is, then insufficient digits are counted as digits with zero values.
 
@@ -476,7 +496,7 @@ This way, for each digit from least significant to most we sort the input array 
 \begin{center}
 	
 	\includegraphics[scale=2]{img/Radixsort.png}
-	\caption{Radix Sort example}\label{fig:radixsort}
+	\caption{Radix Sort principle}\label{fig:radixsort}
 \end{center}
 \end{figure}
 
@@ -491,8 +511,8 @@ Firstly, Bucket Sort distributes data to buckets. Then, there is need to sort ea
 \begin{figure}[H]
 \begin{center}
 	
-	\includegraphics[scale=0.5]{img/Bucketsort.png}
-	\caption{Bucket Sort}\label{fig:bucketsort}
+	\includegraphics[scale=0.3]{img/Bucketsort.png}
+	\caption{Bucket Sort principle}\label{fig:bucketsort}
 \end{center}
 \end{figure}
 
@@ -747,13 +767,15 @@ Stepping through the sorting process is performed by two buttons. Step back acti
 
 In addition, there are buttons that allow go to the beginning and to the end. "Go to start" returns sorting in the initial state. "Go to end" action is intended to fast-forward visualization to the "sorted" state.
 
+Finally, the application allows for changing the speed of visualization. By default, there is an optimal speed for animation flow. To slow down animations, move the knob to the left. To make the visualization run faster, slide knob to the right.
+
 \subsubsection{Opening description}
 
 There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F1}. Then a window with the short description will show up(Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
 
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[scale=0.9]{img/ui/WindowDescription.png}
+	\includegraphics[scale=0.7]{img/ui/WindowDescription.png}
 	\caption{Window "Description window"}\label{fig:desc}
 \end{center}
 \end{figure}
@@ -795,12 +817,25 @@ Keyboard shortcuts for Windows and macOS.
 %% nastavený jazyk práce (nepovinným parametrem language makra
 %% \documentclass, výchozí český) se zadává použitím makra s uvedením
 %% jazyka jako nepovinného parametru.
-\begin{kiconclusions}
-Závěr práce v \uv{českém} jazyce.
+\begin{kiconclusions}[czech]
+Pro bakalářskou práci býl vytvořen software pro podporu výuky třídících algoritmů pomocí vizualizace průběhu třídění nejznámějšími algoritmy. Aplikace dovoluje krokování vypočtu dopředu a dozadu pro každý reprezentovaný algoritmus. Existuje možnost spustit vizualizaci na zadaném či vygenerovaném vstupním poli. Při běhu vizualizace se zobrazují pseudokód použitého algoritmu, aktuální hodnoty některých proměnných a stav průběhu.
+
+Snažil jsem se vytvořit kvalitní software ze snadno ovladatelným uživatelským rozhraním, které by býlo použitelné pro přednášející, cvičící a studenty.
+
+Možným vylepšením aplikace by mohlo být rozšíření o další algoritmy.
+
+První část textu bakalářské práce je teoretická. Zaměřuje se na obecný popis algoritmů, jejích vlastnosti a popis třídících algoritmů použitých v aplikaci. Druhá část popisuje samostatnou aplikaci. 
+
 \end{kiconclusions}
 
 \begin{kiconclusions}[english]
-Thesis conclusions in \uv{English}.
+As the main goal of this bachelor thesis, there was created the teaching support application which visualizes a flow of the most known sorting algorithms. The application allows stepping frontward and backward through each represented algorithm. User may run sorting on a random or custom array. During the demonstration run, the application visualizes a pseudocode flow and current information about variables and state.
+
+I tried to create high-quality software with a user-friendly and easy-to-use interface, which could be used by lecturers, tutors, and students.
+
+Possible next improvement of the applications is extension it by other algorithms.
+
+The first half of the thesis text is more theoretical. It tells about algorithms in general and the algorithms represented in the application. The second half is focused on the application itself.
 \end{kiconclusions}
 
 %% Přílohy obsahu textu práce, za makrem \appendix.
@@ -808,46 +843,26 @@ Thesis conclusions in \uv{English}.
 
 %% Obsah přiloženého CD/DVD. Poslední příloha. Upravte podle vlastní
 %% práce!
-\section{Obsah přiloženého CD/DVD} \label{sec:ObsahCD}
+\section{Contents of enclosed CD/DVD} \label{sec:CDcontents}
 
-Na samotném konci textu práce je uveden stručný popis obsahu
-přiloženého CD/DVD, tj.~jeho závazné adresářové struktury, důležitých
-souborů apod.
+On enclosed CD/DVD you will find:
 
 \begin{description}
 
 \item[\texttt{bin/}] \hfill \\
- 
+Contains the entire program.
 
 \item[\texttt{doc/}] \hfill \\
- 
+This directory contains the text of the thesis in PDF created according to the KI RřF style for theses. Includes all attachments and files needed for generating the text in PDF.
 
 \item[\texttt{src/}] \hfill \\
-  
-\end{description}
-
-Navíc CD/DVD obsahuje:
-
-\begin{description}
-
-\item[\texttt{data/}] \hfill \\
-  Ukázková a~testovací data použitá v~práci a~pro potřeby testování
-  práce při tvorbě posudků a~obhajoby práce.
+Complete source codes of the program "Sorting-Visualization".
 
 \item[\texttt{install/}] \hfill \\
-  Instalátory aplikací, runtime knihoven a~jiných souborů potřebných
-  pro provoz programu \textsc{Program} / webové aplikace
-  \textsc{Webovka}, které nejsou standardní součástí operačního
-  systému určeného pro běh programu / provoz webové aplikace.
+The directory contains installation of JDK version 8 for Windows OS. 
 
 \end{description}
 
-U~veškerých cizích převzatých materiálů obsažených na CD/DVD jejich
-zahrnutí dovolují podmínky pro jejich šíření nebo přiložený souhlas
-držitele copyrightu. Pro všechny použité (a~citované) materiály,
-u~kterých toto není splněno a~nejsou tak obsaženy na CD/DVD, je uveden
-jejich zdroj (např.~webová adresa) v~bibliografii nebo textu práce
-nebo v souboru \texttt{readme.txt}.
 
 %% -------------------------------------------------------------------
 

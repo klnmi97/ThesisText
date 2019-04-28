@@ -248,25 +248,11 @@
       \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
       \endverb
     \endentry
-    \entry{wiki}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{Wikipedia}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.wikipedia.org/
-      \endverb
-      \verb{url}
-      \verb https://www.wikipedia.org/
-      \endverb
-    \endentry
     \entry{stackoverflow}{online}{}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
-      \field{title}{stackoverflow}
+      \field{title}{Stackoverflow}
       \true{nocite}
       \verb{urlraw}
       \verb https://stackoverflow.com/
