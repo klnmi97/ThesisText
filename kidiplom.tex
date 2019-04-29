@@ -191,7 +191,7 @@ Here is more precise definition by Thomas Cormen: "Informally, an algorithm is a
 
 \subsection{Algorithm description}
 
-It is possible to describe algorithm in several ways.
+To execute or understand an algorithm, we may need somehow to describe it. There are several ways of algorithm representation.
 
 \begin{itemize}
 	\item \textit{Natural language}. An algorithm described in the natural language is clear to everyone. However, it may be imprecise and somehow longer than other methods here.
@@ -250,12 +250,12 @@ Nowadays there exists a large number of different algorithms. They are divided i
 \begin{itemize}
 	\item \textit{Recursive algorithms} - algorithms that call itself until the limiting condition is reached.
 	\item \textit{Probabilistic algorithms} - algorithms that make some random decisions.
-	\item \textit{Parallel algorithms} - algorithms that divide a task, for example, into threads or between processors etc.
+	\item \textit{Parallel algorithms} - algorithms that divide a task, for example, into threads or between processors, etc.
 	\item \textit{Sequential algorithms} - unlike the parallel algorithms, every step of the task is done in sequence.
 	\item \textit{Divide and conquer} - algorithms that divide a problem into smaller parts until they become indivisible. Then merge solutions in some way.
 	\item \textit{Greedy algorithms} - these algorithms make the best choice in a given situation. They never change their previous choice.
 	\item \textit{Dynamic programming} - algorithms that start solving a problem from the simplest to more complicated parts. They use outcomes from previous solutions.
-	\item \textit{Heuristic algorithms} - algorithm which is used for finding solution among all possible. However, there is no guarantee that a found one will be the best.
+	\item \textit{Heuristic algorithms} - algorithms which are used for finding solution among all possible. However, there is no guarantee that a found one will be the best.
 \end{itemize}
 
 \subsection{Complexity}
@@ -273,7 +273,7 @@ To be more clear, let us have an example. $f(n) = 5n^3 + 10n^2 + 20n + 4$, the h
 For such approximation there exists \textbf{O notation}:
 
 \begin{enumerate}
-	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$. %???
+	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$ (Figure \ref{fig:big-omega}).
 	\item \textit{Asymptotic lower bound}(or $\Omega$). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
 	\item \textit{Asymptotic tight bound}(or $\Theta$). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
 \end{enumerate}
@@ -718,7 +718,9 @@ Buttons and other interactive elements on the panel (Figure \ref{fig:controls}, 
 
 \subsubsection{Information panel}
 
-The information panel(Figure \ref{fig:infopanel}) is located on the right side of the window. It consists of the header with the name of the current algorithm, the pseudocode of the selected algorithm and description of the current state during visualization.
+The information panel(Figure \ref{fig:infopanel}) is located on the right side of the window. It consists of the header with the name of the current algorithm, the pseudocode of the selected algorithm and description of the current state.
+
+During the run of the visualization, this information is dynamically updated according to the current algorithm. Application synchronously highlights used lines of code and updates the current state line showing the current state of the algorithm and some values of used variables.
 
 \begin{figure}[H]
 \begin{center}
@@ -753,7 +755,7 @@ To start a new visualization, there are some options. You may either start it by
 \end{center}
 \end{figure}
 
-To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window(Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma.
+To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window(Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma. The input field accepts numbers from range 0 - 99, except a pair of algorithms. Counting Sort has range 0 - 9 and Radix Sort accepts numbers from range 0 - 9999. 
 
 \subsubsection{Visualization control}
 
@@ -769,9 +771,20 @@ In addition, there are buttons that allow go to the beginning and to the end. "G
 
 Finally, the application allows for changing the speed of visualization. By default, there is an optimal speed for animation flow. To slow down animations, move the knob to the left. To make the visualization run faster, slide knob to the right.
 
+\subsubsection{Information about the application}
+
+To display a window with information about the application(Figure \ref{fig:about}) click the "About" button on the upper panel or press \textbf{F1} key.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.7]{img/ui/WindowAbout.PNG}
+	\caption{Window "About window"}\label{fig:about}
+\end{center}
+\end{figure}
+
 \subsubsection{Opening description}
 
-There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F1}. Then a window with the short description will show up(Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
+There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F2}. Then a window with the short description will show up(Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
 
 \begin{figure}[H]
 \begin{center}
@@ -782,7 +795,7 @@ There is a short description for each algorithm. To show information click "Info
 
 \subsubsection{Escaping application}
 
-Close application by clicking exit button. Its location depends on the operating system.
+Close application by clicking exit button. Its location depends on the operating system. Also, you may use the \textbf{Esc} button.
 
 \subsection{Keyboard shortcuts}
 
@@ -801,13 +814,19 @@ Keyboard shortcuts for Windows and macOS.
 	\hline
 	Step back & Ctrl + A & Cmd + A\\
 	\hline
-	Show description & F1 & F1\\
+	Show description & F2 & F2\\
 	\hline
 	New random sorting & F5 & F5\\
 	\hline
 	New custom sorting & F4 & F4\\
 	\hline
+	About & F1 & F1\\
+	\hline
 	Close application & Esc & Esc\\
+	\hline
+	Close "About" window & Esc & Esc\\
+	\hline
+	Close description & Esc & Esc\\
 	\hline
 	
 	\end{tabular}
@@ -856,7 +875,7 @@ Contains the entire program.
 This directory contains the text of the thesis in PDF created according to the KI RřF style for theses. Includes all attachments and files needed for generating the text in PDF.
 
 \item[\texttt{src/}] \hfill \\
-Complete source codes of the program "Sorting-Visualization".
+Complete source codes of the program "Sorting Visualizer".
 
 \item[\texttt{install/}] \hfill \\
 The directory contains installation of JDK version 8 for Windows OS. 
@@ -869,7 +888,6 @@ The directory contains installation of JDK version 8 for Windows OS.
 %% Sazba volitelného seznamu zkratek, za přílohami.
 \printglossary
 
-
 %% Sazba povinné bibliografie, za přílohami (případně i za seznamem
 %% zkratek). Při použití BibLaTeXu použijte makro
 %% \printbibliography. jinak prostředí thebibliography. Ne obojí!
@@ -879,17 +897,6 @@ The directory contains installation of JDK version 8 for Windows OS.
 \nocite{*}
 %% Vlastní sazba bibliografie při použití BibLaTeXu.
 \printbibliography
-
-%% Bibliografie, včetně sazby, při nepoužití BibLaTeXu.
-% \begin{thebibliography}{9}
-%\bibitem{kniha2} \uppercase{Hawke}, Paul. NanoHttpd: Light-weight HTTP server designed for embedding in other applications. GitHub [online]. 2014-05-12. [cit. 2014-12-06]. Dostupné z: \url{https://github.com/NanoHttpd/nanohttpd}
-%
-%\bibitem{jeske13} \uppercase{Jeske}, David; \uppercase{Novák}, Josef. Simple HTTP Server in \csharp: Threaded synchronous HTTP Server abstract class, to respond to HTTP requests. CodeProject: For those who code [online]. 2014-05-24. [cit. 2014-12-06]. Dostupné z: \url{http://www.codeproject.com/Articles/137979/Simple-HTTP-Server-in-C}
-%
-%\bibitem{uzis2012} \uppercase{ÚSTAV ZDRAVOTNICKÝCH INFORMACÍ A STATISTIKY ČR}. Lékaři, zubní lékaři a farmaceuti 2012 [online]. Praha 2, Palackého náměstí 4: Ústav zdravotnických informací a statistiky ČR, 2012 [cit. 2014-12-06]. ISBN 978-80-7472-089-5. Dostupné z: \url{http://www.uzis.cz/publikace/lekari-zubni-lekari-farmaceuti-2012}
-% \end{thebibliography}
-
-%% Sazba volitelného rejstříku, za bibliografií.
 %\printindex
 
 \end{document}
