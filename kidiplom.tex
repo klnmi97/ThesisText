@@ -119,6 +119,7 @@
 \usepackage{forest}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{qrcode}
 
 \definecolor{mygreenii}{RGB}{34,162,70}
 \definecolor{mygreeni}{RGB}{34,162,70}
@@ -254,7 +255,7 @@ Nowadays there exists a large number of different algorithms. They are divided i
 
 \subsection{Complexity}
 
-Frequently happen situations when we need to know the performance of some algorithm. There might be a necessity to compare performance of some algorithms, for example. Or we might need to know the time for an algorithm to run with some input. And here we are moving to the concept of the algorithm complexity.
+Let us consider some problem that requires a solution. Then, suppose that this problem is possible to solve by three or more different algorithms. For the most suitable choice, we compare the algorithms. To compare these algorithms we need to measure the performance of each. Besides, we might need to measure the time for an algorithm to run with some input. Finally, we are moving to the concept of the algorithm complexity \citep{knuth1}, \cite{sipser}, \cite{alm2}.
 
 There is a time complexity and a space complexity. In general, complexity gives the amount of time or space needed to run an algorithm. To be more precise: time complexity is a function $f:\mathbb{N}\to\mathbb{N}$ that maps each input to the maximum number of steps for this input needed for an algorithm to complete a task. We will be talking here only about the time complexity and will call it just complexity.
 
@@ -264,17 +265,15 @@ Often complexity of an algorithm is measured on the large inputs. Since complexi
 
 To be more clear, let us have an example. $f(n) = 5n^3 + 10n^2 + 20n + 4$, the highest degree term here is $5n^3$. In some cases we can omit the coefficient 5, now $f$ is asymptotically at most $n^3$.
 
-For such approximation there exists \textbf{O notation}:
+For such approximations there exist different notations \cite{knuth1}, \cite{sipser}:
 
 \begin{enumerate}
-	\item \textit{Asymptotic upper bound}(or $O$). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$ (Figure \ref{fig:big-omega}).
-	\item \textit{Asymptotic lower bound}(or $\Omega$). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
-	\item \textit{Asymptotic tight bound}(or $\Theta$). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
+	\item \textit{Asymptotic upper bound} (or Big O notation). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$ (Figure \ref{fig:big-omega}).
+	\item \textit{Asymptotic lower bound} (or Big Omega notation). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
+	\item \textit{Asymptotic tight bound} (or Big Theta notation). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
 \end{enumerate}
 
-All the functions that we have here we will assume to take only non-negative values.
-
-Also, there is a \textit{small-o} notation. It slightly differs from the \textit{Big-O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
+All the functions that we have here we will assume to take only non-negative values. Also, there is a \textit{small o} notation. It slightly differs from the \textit{Big O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
 
 \begin{figure}[H]
 	\begin{center}
@@ -295,13 +294,13 @@ For the asymptotic analysis of an algorithm mostly the worst-case complexity is 
 
 Here are some complexities (from the slowest to the fastest growing):
 \begin{enumerate}
- \item $O(1)$ - constant complexity
- \item $O(\log(n))$ - logarithmic
- \item $O(n)$ - linear
- \item $O(n \log(n))$ - linear-logarithmic
- \item $O(n^2)$ - quadratic
- \item $O(2^n)$ - exponential
- \item $O(n!)$ - factorial
+ \item $O(1)$ -- constant complexity
+ \item $O(\log(n))$ -- logarithmic
+ \item $O(n)$ -- linear
+ \item $O(n \log(n))$ -- linear-logarithmic
+ \item $O(n^2)$ -- quadratic
+ \item $O(2^n)$ -- exponential
+ \item $O(n!)$ -- factorial
 \end{enumerate}
 
 \subsection{Sorting}
@@ -314,17 +313,17 @@ Ascending order means that items in a sequence are arranged from the smallest to
 \\\\
 Sorting algorithms are divided into two main types:
 \begin{enumerate}
-	\item \textit{Algorithms of internal sorting} - all the data to sort is stored in the internal memory during the sorting process. It is used when the amount of data to sort is known.
-	\item \textit{Algorithms of external sorting} - all the data to sort is stored outside the internal memory (e.g. on a hard disk) and is loaded to the internal memory by small parts.
+	\item \textit{Algorithms of internal sorting} -- all the data to sort is stored in the internal memory during the sorting process. It is used when the amount of data to sort is known.
+	\item \textit{Algorithms of external sorting} -- all the data to sort is stored outside the internal memory (e.g. on a hard disk) and is loaded to the internal memory by small parts.
 \end{enumerate}
 
 Here, in the text, we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used\cite{knuth3}:
 \begin{enumerate}
-	\item \textit{Sorting by Insertion} - single items from the sequence are put into the right place of the sorted part.
-	\item \textit{Sorting by Exchanging} - swap elements of each pair that are out of order till no more such pairs exist.
-	\item \textit{Sorting by Selection} - method that uses repeated selection.
-	\item \textit{Sorting by Merging} - merging smaller parts with the right order.
-	\item \textit{Sorting by Distribution} - technique which does not use comparisons to sort. It works relying on the knowledge about the set from where data to sort is taken. Data is distributed to some intermediate structures according to values. %%rly?
+	\item \textit{Sorting by Insertion} -- single items from the sequence are put into the right place of the sorted part.
+	\item \textit{Sorting by Exchanging} -- swap elements of each pair that are out of order till no more such pairs exist.
+	\item \textit{Sorting by Selection} -- method that uses repeated selection.
+	\item \textit{Sorting by Merging} -- merging smaller parts with the right order.
+	\item \textit{Sorting by Distribution} -- technique which does not use comparisons to sort. It works relying on the knowledge about the set from where data to sort is taken. Data is distributed to some intermediate structures according to values. %%rly?
 \end{enumerate}
 
 \newpage
@@ -344,18 +343,14 @@ Insertion Sort algorithm has a simple idea. Assume an array with items to be sor
 \end{center}
 \end{figure}
 
-In order to insert element into the right place in the sorted part, we compare selected item from the unsorted part with each item from the sorted part in the direction from left to right. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right. Finally, when the right position is found, we insert an item into the sorted part.
-
-Complexity of Insertion Sort is $\Theta(n^2)$.
+In order to insert element into the right place in the sorted part, we compare selected item from the unsorted part with each item from the sorted part in the direction from right to left. Comparing continues until smaller or equal element is found or no elements to compare left. After each comparison, if current item in the sorted part is greater, we move that current item one position right. Finally, when the right position is found, we insert an item into the sorted part. Complexity of Insertion Sort is $\Theta(n^2)$.
 
 \subsection{Selection Sort}
 \label{sec:selection}
 
 Selection Sort algorithm is based on the repeated selection. Here we consider finding minimal key from the unsorted part and swapping it with the first unsorted key. As well as in the \hyperref[sec:insertion]{Insertion Sort}, sorted part grows from the beginning of the sequence.
 
-Assume an array of items to sort. At the beginning of the sorting process unsorted part is represented by the whole array. Then, the first item of the unsorted part is set as the smallest key and is compared with the follow-up elements. When smaller item is found, it is set as a new smallest key. After the end of the array is reached the smallest item is swapped with the first element of the unsorted part and it becomes the sorted part of the array. This step is repeated till the array is sorted.
-
-Complexity of this sorting algorithm is $\Theta(n^2)$.
+Assume an array of items to sort. At the beginning of the sorting process unsorted part is represented by the whole array. Then, the first item of the unsorted part is set as the smallest item and is compared with the follow-up elements. When smaller item is found, it is set as a new smallest key. After the end of the array is reached the smallest item is swapped with the first element of the unsorted part and it becomes the sorted part of the array. This step is repeated till the array is sorted. Complexity of this sorting algorithm is $\Theta(n^2)$.
 
 \subsection{Bubble Sort}
 \label{sec:bubble}
@@ -390,10 +385,10 @@ The way the algorithm works:
  \item Repeat steps 1. and 2. but with a bit different range from $a = a + 1$ to $b = b - 1$
 \end{enumerate}
 
-Cocktail Sort works better than \hyperref[sec:bubble]{Bubble Sort} in some situations, e.g. array is already sorted. However, number of swaps remains the same. This way, worst case complexity remains $\Theta(n^2)$.
+For Cocktail Sort worst case complexity remains $\Theta(n^2)$.
 
 \subsection{Quick Sort}
-
+\label{sec:quicksort}
 Quick Sort works on the principle "divide and conquer". It recursively applies itself on smaller parts of array until it is not sorted.
 
 Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item, also known as pivot, is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
@@ -410,17 +405,15 @@ This way, it is enough to apply Quick Sort on each part of array not including p
 
 There are several methods of partitioning of array into two parts, here I want to describe one that is demonstrated in the software part of this work.
 
-Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the rightmost item and index is the first. Next, each item of the array except pivot is compared with the pivot. If a current item is lesser or equal to the pivot, it is swapped with the index item, next in order item becomes an index. Finally, index and pivot are swapped and this way pivot is on its final position.
+Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the rightmost item and index is the first. Next, each item of the array except pivot is compared with the pivot. If a current item is less or equal to the pivot, it is swapped with the index item, next in order item becomes an index. Finally, index and pivot are swapped and this way pivot is on its final position.
 
 Quick Sort is counted as an effective algorithm because its average complexity is $\Theta(n \log n)$. However, when array is maximally unbalanced it may show worst performance. Worst case complexity is $\Theta(n^2)$.
 
 \subsection{Merge Sort}
 
-Merge Sort as well as Quick Sort is an algorithm of type "divide and conquer". The logic of it is simple: recursively divide data into two halves till it becomes indivisible then merge parts back.
+Merge Sort as well as \hyperref[sec:quicksort]{Quick Sort} is an algorithm of type "divide and conquer". Its logic is simple: divide data into two parts, sort the left part, sort the right part, then "merge" the parts back.
 
-Merge procedure itself takes items from each previously divided part one by one, compares them and moves the smallest to the output, repeats previous step.
-
-Merge Sort complexity is $\Theta(n \log n)$
+The algorithm works by the recursive application itself on the unsorted parts. In the beginning, it selects the middle item, which becomes the rightmost element of the left part. Then, it recursively sorts both parts. Finally, the algorithm "merges" two sorted parts. Merging procedure itself takes items from each of two sorted parts one by one, compares them and moves the smallest to the output, repeats the previous step. Merge Sort complexity is $\Theta(n \log n)$
 
 \begin{figure}[H]
 \begin{center}
@@ -458,15 +451,13 @@ Binary heap may be implemented by simple array. Item at position zero is a root 
 \begin{enumerate}
  \item \label{itm:step1} Build max-heap
  \item \label{itm:step2} Swap root and the last node, reduce size of heap by one
- \item \label{itm:step3} Build max-heap without the node on a reduced position
+ \item \label{itm:step3} Build max-heap without the nodes on a reduced position
  \item Repeat steps \ref{itm:step2} and \ref{itm:step3} until the range of array is one
 \end{enumerate}
 
 To build \textit{max-heap} from current node we need to assure that right and left children comprise max-heaps. This way, in the first step procedure for building max-heap is recursively applied for each node that has at least one child from bottom to top.
 
-After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array.
-
-Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
+After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array. Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
 
 \subsection{Counting Sort} \label{sec:counting}
 
@@ -484,7 +475,7 @@ The Radix sorting algorithm is based on the idea of using separate digits to det
 
 For better understanding let us go to the details. Assume the array of integers. Let $d$ be the number of digits of the largest item from the array. If there are numbers from the array that have less count of digits than the $d$ is, then insufficient digits are counted as digits with zero values.
 
-This way, for each digit from least significant to most we sort the input array according to the current digit(Figure \ref{fig:radixsort}). Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
+This way, for each digit from least significant to most we sort the input array according to the current digit (Figure \ref{fig:radixsort}). Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
 
 \begin{figure}[H]
 \begin{center}
@@ -496,11 +487,13 @@ This way, for each digit from least significant to most we sort the input array 
 
 \subsection{Bucket Sort}
 
-Bucket Sort as well as \hyperref[sec:counting]{Counting Sort} requires to know range of sorted data in advance. It is suitable when data is uniformly distributed over the range.
+Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
-At the beginning algorithm creates $n$ intervals of same size. For each interval there is created a dynamic structure which will held items from the input. This dynamic structures are called buckets.
+In the beginning, the algorithm creates n intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
 
-Firstly, Bucket Sort distributes data to buckets. Then, there is need to sort each non-empty bucket. This task can be done by using, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, items from each bucket one by one are moved to the output array.
+Firstly, Bucket Sort distributes data to buckets. Then, it sorts each non-empty bucket. For this task, we can use, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, the algorithm moves items from each bucket one by one to the output array. 
+
+In case we select Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
 
 \begin{figure}[H]
 \begin{center}
@@ -517,21 +510,13 @@ This section describes the structure of the program and some useful topics from 
 
 \subsection{Used technologies}
 
-Nowadays exist a lot of programming languages, libraries, frameworks. On the one hand, a software developer has a wide choice. On the other hand, here comes up a new problem to make the right choice which should fit the best to the current task.
+Nowadays there are a lot of programming languages, libraries, frameworks. On the one hand, a software developer has a wide choice. On the other hand, here comes up a new problem to make the right choice which should fit the best to the current task.
 
-The main programming language of the thesis software is Java. To be more precise, Java Platform, Standard Edition 8. Java is a cross-platform, object-oriented language. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM} regardless of the platform. 
-
-\begin{figure}[H]
-\begin{center}
-	
-	\includegraphics[scale=0.2]{img/java_logo.png}
-	\caption{Java}\label{fig:java}
-\end{center}
-\end{figure}
+The main programming language of the thesis software is Java\footnote{\url{https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}}. To be more precise, Java Platform, Standard Edition 8. Java is a cross-platform, object-oriented language. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM}\footnote{\url{https://www.geeksforgeeks.org/jvm-works-jvm-architecture/}} regardless of the platform. 
 
 As for the visual side of the application, Java provides a good JavaFX library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS} for styling some elements of the user interface.
 
-The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different screens and on the macOS. A version control system Git in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
+The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different resolutions and on the macOS. A version control system Git in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
 
 \newpage
 \subsection{Structure overview}

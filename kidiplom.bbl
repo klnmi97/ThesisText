@@ -113,8 +113,8 @@
       \strng{authorbibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
       \strng{authornamehash}{75a9e61254fc449d4886b6ee4cff0b22}
       \strng{authorfullhash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{0-534-94728-X}
@@ -122,6 +122,39 @@
       \field{title}{Introduction to the Theory of Computation}
       \field{year}{1997}
       \true{nocite}
+    \endentry
+    \entry{alm2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f4f3a283624071dae11afca958971e52}{%
+           family={Bělohlávek},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Katedra informatiky, Univerzita Palackeho v Olomouci}%
+      }
+      \strng{namehash}{f4f3a283624071dae11afca958971e52}
+      \strng{fullhash}{f4f3a283624071dae11afca958971e52}
+      \strng{bibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
+      \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{czech}
+      \field{subtitle}{část 2}
+      \field{title}{Algoritmická matematika 1}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
+      \endverb
+      \verb{url}
+      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
+      \endverb
     \endentry
     \entry{knuth3}{book}{}
       \name{author}{1}{}{%
@@ -141,8 +174,8 @@
       \strng{authornamehash}{d6c321ee95d690d6a42850df470be5e0}
       \strng{authorfullhash}{d6c321ee95d690d6a42850df470be5e0}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second Edition}
@@ -171,8 +204,8 @@
       \strng{authorbibnamehash}{dab426883b0c224b023b40469d97bd9b}
       \strng{authornamehash}{dab426883b0c224b023b40469d97bd9b}
       \strng{authorfullhash}{dab426883b0c224b023b40469d97bd9b}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Third Edition}
@@ -199,7 +232,7 @@
       \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -213,39 +246,6 @@
       \endverb
       \verb{url}
       \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-1.pdf
-      \endverb
-    \endentry
-    \entry{alm2}{book}{}
-      \name{author}{1}{}{%
-        {{hash=f4f3a283624071dae11afca958971e52}{%
-           family={Bělohlávek},
-           familyi={B\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Katedra informatiky, Univerzita Palackeho v Olomouci}%
-      }
-      \strng{namehash}{f4f3a283624071dae11afca958971e52}
-      \strng{fullhash}{f4f3a283624071dae11afca958971e52}
-      \strng{bibnamehash}{f4f3a283624071dae11afca958971e52}
-      \strng{authorbibnamehash}{f4f3a283624071dae11afca958971e52}
-      \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
-      \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{czech}
-      \field{subtitle}{část 2}
-      \field{title}{Algoritmická matematika 1}
-      \true{nocite}
-      \verb{urlraw}
-      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
-      \endverb
-      \verb{url}
-      \verb http://belohlavek.inf.upol.cz/vyuka/algoritmicka-matematika-1-2.pdf
       \endverb
     \endentry
     \entry{stackoverflow}{online}{}
@@ -276,8 +276,8 @@
       \endverb
     \endentry
     \entry{java}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labeltitlesource}{title}
       \field{title}{Java documentation}
       \true{nocite}
