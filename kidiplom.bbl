@@ -113,8 +113,8 @@
       \strng{authorbibnamehash}{75a9e61254fc449d4886b6ee4cff0b22}
       \strng{authornamehash}{75a9e61254fc449d4886b6ee4cff0b22}
       \strng{authorfullhash}{75a9e61254fc449d4886b6ee4cff0b22}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{0-534-94728-X}
@@ -141,8 +141,8 @@
       \strng{authornamehash}{f4f3a283624071dae11afca958971e52}
       \strng{authorfullhash}{f4f3a283624071dae11afca958971e52}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{czech}
@@ -249,8 +249,8 @@
       \endverb
     \endentry
     \entry{stackoverflow}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labeltitlesource}{title}
       \field{title}{Stackoverflow}
       \true{nocite}
@@ -262,8 +262,8 @@
       \endverb
     \endentry
     \entry{geeks}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{title}{GeeksforGeeks}

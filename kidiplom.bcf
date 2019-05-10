@@ -2010,13 +2010,16 @@
     <bcf:citekey order="1">cormen</bcf:citekey>
     <bcf:citekey order="2">knuth1</bcf:citekey>
     <bcf:citekey order="3">knuth1</bcf:citekey>
-    <bcf:citekey order="4">knuth1</bcf:citekey>
-    <bcf:citekey order="5">sipser</bcf:citekey>
-    <bcf:citekey order="6">alm2</bcf:citekey>
-    <bcf:citekey order="7">knuth1</bcf:citekey>
-    <bcf:citekey order="8">sipser</bcf:citekey>
+    <bcf:citekey order="4">cormen</bcf:citekey>
+    <bcf:citekey order="5">knuth1</bcf:citekey>
+    <bcf:citekey order="6">sipser</bcf:citekey>
+    <bcf:citekey order="7">alm2</bcf:citekey>
+    <bcf:citekey order="8">knuth1</bcf:citekey>
     <bcf:citekey order="9">sipser</bcf:citekey>
-    <bcf:citekey order="10">knuth3</bcf:citekey>
+    <bcf:citekey order="10">sipser</bcf:citekey>
+    <bcf:citekey order="11">cormen</bcf:citekey>
+    <bcf:citekey order="12">alm2</bcf:citekey>
+    <bcf:citekey order="13">knuth3</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

@@ -119,7 +119,6 @@
 \usepackage{forest}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{qrcode}
 
 \definecolor{mygreenii}{RGB}{34,162,70}
 \definecolor{mygreeni}{RGB}{34,162,70}
@@ -195,7 +194,7 @@ To execute or understand an algorithm, we may need somehow to describe it. There
 	\item \textit{Visual representation}. An algorithm may be described by many other methods, including graphical representation like flowcharts (Figure \ref{fig:flowchart}).
 \end{itemize}
 
-As an example, we will consider the algorithm for finding factorial representing it in pseudocode and by the flowchart (Figure \ref{fig:flowchart}).
+As an example, we will consider the algorithm for finding factorial representing it in pseudocode (Code \ref{fact}) and by the flowchart (Figure \ref{fig:flowchart}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -240,7 +239,7 @@ As an example, we will consider the algorithm for finding factorial representing
 
 \subsection{Types of algorithms}
 
-Nowadays there exists a large number of different algorithms. They are divided into different groups by different criteria. Often one algorithm may belong to several groups. Here are some of them.
+Nowadays there exists a large number of different algorithms. They are divided into different groups by different criteria. Often one algorithm may belong to several groups. Here are some of them \cite{cormen}.
 
 \begin{itemize}
 	\item \textit{Recursive algorithms} -- algorithms that call itself until the limiting condition is reached.
@@ -290,7 +289,7 @@ All the functions that we have here we will assume to take only non-negative val
 	\end{center}
 \end{figure}
 
-For the asymptotic analysis of an algorithm mostly the worst-case complexity is used. Algorithm is considered for practically solvable if its running time is in $O(n^c)$, $c$ is usually a small constant. 
+For the asymptotic analysis of an algorithm mostly the worst-case complexity is used. Algorithm is considered for practically solvable if its running time is in $O(n^c)$, $c$ is usually a small constant \cite{cormen}. 
 
 Here are some complexities (from the slowest to the fastest growing):
 \begin{enumerate}
@@ -311,19 +310,19 @@ Simply said, sorting is a process of rearranging of items, which are possible to
 
 Ascending order means that items in a sequence are arranged from the smallest to the largest item. On the contrary, descending order means positioning from the largest to the smallest item.
 \\\\
-Sorting algorithms are divided into two main types:
+Sorting algorithms are divided into two main types \citep{alm2}:
 \begin{enumerate}
 	\item \textit{Algorithms of internal sorting} -- all the data to sort is stored in the internal memory during the sorting process. It is used when the amount of data to sort is known.
-	\item \textit{Algorithms of external sorting} -- all the data to sort is stored outside the internal memory (e.g. on a hard disk) and is loaded to the internal memory by small parts.
+	\item \textit{Algorithms of external sorting} -- all the data to sort is stored outside the internal memory (e.g. on a hard disk). These algorithms usually combine sorting in the internal memory, merging of sorted parts and saving them to the external memory.
 \end{enumerate}
 
-Here, in the text, we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used\cite{knuth3}:
+In the text we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used and algorithms which use these techniques and are included in the software \cite{knuth3}:
 \begin{enumerate}
-	\item \textit{Sorting by Insertion} -- single items from the sequence are put into the right place of the sorted part.
-	\item \textit{Sorting by Exchanging} -- swap elements of each pair that are out of order till no more such pairs exist.
-	\item \textit{Sorting by Selection} -- method that uses repeated selection.
-	\item \textit{Sorting by Merging} -- merging smaller parts with the right order.
-	\item \textit{Sorting by Distribution} -- technique which does not use comparisons to sort. It works relying on the knowledge about the set from where data to sort is taken. Data is distributed to some intermediate structures according to values. %%rly?
+	\item \textit{Sorting by Insertion} -- single items from the sequence are put into the right place of the sorted part. Here belongs \hyperref[sec:insertion]{Insertion Sort}.
+	\item \textit{Sorting by Exchanging} -- swap elements of each pair that are out of order till no more such pairs exist. Here we have \hyperref[sec:bubble]{Bubble Sort}, \hyperref[sec:cocktailsort]{Cocktail Sort}, \hyperref[sec:quicksort]{Quick Sort}.
+	\item \textit{Sorting by Selection} -- method that uses repeated selection. \hyperref[sec:selection]{Selection Sort} and \hyperref[sec:heapsort]{Heap Sort} use this technique.
+	\item \textit{Sorting by Merging} -- merging smaller parts with the right order. And \hyperref[sec:mergesort]{Merge Sort} uses it. 
+	\item \textit{Sorting by Distribution} -- technique which does not use comparisons to sort. It works relying on the knowledge about the set from where data to sort is taken. Data is distributed to some intermediate structures according to values. \hyperref[sec:radixsort]{Radix Sort}, \hyperref[sec:bucketsort]{Bucket Sort} and \hyperref[sec:counting]{Counting Sort} belong here.
 \end{enumerate}
 
 \newpage
@@ -370,6 +369,7 @@ Bubble Sort complexity is $\Theta(n^2)$.
 
 %add pic of bubblesort in action
 \subsection{Cocktail Sort}
+\label{sec:cocktailsort}
 
 Cocktail Sort or also known as Bidirectional Sort. This algorithm similarly to the Bubble Sort uses the idea of exchanging unordered adjacent items of array. 
 
@@ -410,6 +410,7 @@ Firstly, a pivot and index item are selected on the unsorted array or its part. 
 Quick Sort is counted as an effective algorithm because its average complexity is $\Theta(n \log n)$. However, when array is maximally unbalanced it may show worst performance. Worst case complexity is $\Theta(n^2)$.
 
 \subsection{Merge Sort}
+\label{sec:mergesort}
 
 Merge Sort as well as \hyperref[sec:quicksort]{Quick Sort} is an algorithm of type "divide and conquer". Its logic is simple: divide data into two parts, sort the left part, sort the right part, then "merge" the parts back.
 
@@ -424,6 +425,7 @@ The algorithm works by the recursive application itself on the unsorted parts. I
 \end{figure}
 
 \subsection{Heap Sort}
+\label{sec:heapsort}
 
 Heap Sort is a selection based algorithm and it offers another interesting approach to sorting. In comparison with the \hyperref[sec:selection]{Selection Sort} it has optimized selection by using binary heap data structure.
 
@@ -459,7 +461,8 @@ To build \textit{max-heap} from current node we need to assure that right and le
 
 After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array. Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
 
-\subsection{Counting Sort} \label{sec:counting}
+\subsection{Counting Sort} 
+\label{sec:counting}
 
 Counting Sort is usually used for sorting integer keys in the range from $0$ to $k$. The algorithm is based on counting keys of distinct values. Final positions of keys are calculated from the previous computations. It means that the position of some key $x$ depends on the count of keys that are less than $x$.
 
@@ -470,6 +473,7 @@ Firstly, for each element from the initial array, we increase the respective cou
 Worst case complexity for Counting Sort is $\Theta(k + n)$, where $k$ is number of items in range and $n$ is size of array to be sorted.
 
 \subsection{Radix Sort}
+\label{sec:radixsort}
 
 The Radix sorting algorithm is based on the idea of using separate digits to determine final number positions. It works with the help of some stable sorting algorithm, for example \hyperref[sec:counting]{Counting Sort}, taking digits one by one from least significant to most significant.
 
@@ -486,6 +490,7 @@ This way, for each digit from least significant to most we sort the input array 
 \end{figure}
 
 \subsection{Bucket Sort}
+\label{sec:bucketsort}
 
 Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
@@ -749,7 +754,7 @@ To display a window with information about the application (Figure \ref{fig:abou
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=0.7]{img/ui/WindowAbout.PNG}
-	\caption{Window "About window"}\label{fig:about}
+	\caption{Window "About"}\label{fig:about}
 \end{center}
 \end{figure}
 
