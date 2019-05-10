@@ -512,11 +512,11 @@ This section describes the structure of the program and some useful topics from 
 
 Nowadays there are a lot of programming languages, libraries, frameworks. On the one hand, a software developer has a wide choice. On the other hand, here comes up a new problem to make the right choice which should fit the best to the current task.
 
-The main programming language of the thesis software is Java\footnote{\url{https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}}. To be more precise, Java Platform, Standard Edition 8. Java is a cross-platform, object-oriented language. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM}\footnote{\url{https://www.geeksforgeeks.org/jvm-works-jvm-architecture/}} regardless of the platform. 
+The main programming language of the thesis software is Java\footnote{\href{https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}{Java}}. To be more precise, Java Platform, Standard Edition 8. Java is a cross-platform, object-oriented language. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM}\footnote{\href{https://www.geeksforgeeks.org/jvm-works-jvm-architecture/}{What is JVM}} regardless of the platform. 
 
-As for the visual side of the application, Java provides a good JavaFX library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS} for styling some elements of the user interface.
+As for the visual side of the application, Java provides a good JavaFX\footnote{\href{https://docs.oracle.com/javase/8/javafx/get-started-tutorial/jfx-overview.htm}{JavaFX overview}} library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS}\footnote{\href{https://www.w3schools.com/css/default.asp}{About CSS}} for styling some elements of the user interface.
 
-The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different resolutions and on the macOS. A version control system Git in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
+The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different resolutions and on the macOS. A version control system Git\footnote{\href{https://git-scm.com/}{Learn and download Git}} in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
 
 \newpage
 \subsection{Structure overview}
@@ -571,20 +571,16 @@ Program source codes are structured into packages:
 
 Each package contains certain classes, which are grouped by the purpose of use. Next subsections contain some general descriptions of the classes from packages. 
 \subsubsection{A root package}
-The root package contains only one class. It is MainUI.java. This class serves as the main class which starts the application. Although JavaFX provides the possibility of using XML-based language for creating a user interface, here it is not used. 
-
-The MainUI class defines main user interface elements and does the instantiating of controllers.
+The root package contains only one class. It is MainUI.java. This class serves as the main class which starts the application. Although JavaFX provides the possibility of using XML-based language for creating a user interface, here it is not used. The MainUI class defines main user interface elements and does the instantiating of controllers.
 
 \subsubsection{Constants, Data and Enum packages}
-All these three packages work with data and data structures, although a bit differently.
-
-Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program. Data package contains classes which serve as definitions for data objects. \textit{BindingData} class instance holds data for control buttons bindings. Results class defines object that is used for transferring results from the input dialog. Enum package contains one definition of the enum class. \textit{Algorithm} enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
+All these three packages work with data and data structures, although a bit differently. Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program. Data package contains classes which serve as definitions for data objects. \textit{BindingData} class instance holds data for control buttons bindings. Results class defines object that is used for transferring results from the input dialog. Enum package contains one definition of the enum class. \textit{Algorithm} enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
 
 \subsubsection{Controllers package}
 The package has two Java class files: \textit{AnimationController.java} and \textit{ViewController.java}. The first one is responsible for the control of animations run. And the second one controls the graphic part of the application: creation the right graphic representation of array nodes, control of animation creation, pseudo code creation control. Both are used in the main class.
 
 \subsubsection{NodeControllers package}
-NodeControllers package includes \textit{BrickNode.java, ColorInfoManager.java, DynamicNodes.java, FixedNodes.java, Pseudocode.java, Tree.java and VariablesInfo.java}.
+NodeControllers package includes \textit{BrickNode.java, ColorInfoManager.java, DynamicNodes.java, FixedNodes.java, Pseudocode.java, Tree.java and Vari\-ables\-Info.java}.
 
 BrickNode class defines kind of representation of the key from the array. After instantiating it can be styled in many ways. This is done by the different node managers. We shall talk about them next. Before moving on, we describe node managers generally. These objects are responsive for creation a visual representation from the given data. Also, they may create some additional graphic items, e.g. buckets for the Bucket Sort. Node managers define animations for the certain types of nodes and define their own metric system for certain type of nodes.
 
@@ -642,7 +638,7 @@ Since Java is cross-platform, you may use the application within the most popula
 
 \subsection{Starting application}
 
-Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK or JRE installed and configured. In case it is already done, it is enough to run the file of the application with \textit{.jar} extension as simple application.
+Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK\footnote{\href{https://www.oracle.com/technetwork/java/javase/jdk-8-readme-2095712.html}{Java Development Kit}} or JRE\footnote{\href{https://www.w3schools.in/java-tutorial/jre/}{Java Runtime Environment}} installed and configured. In case it is already done, it is enough to run the file of the application with \textit{.jar} extension as simple application.
 
 Also, it is possible to use option "Open with". Here is necessary to select the right application. For example, in the Windows operating system it is usually "Java(TM) Platform SE binary" or \textit{javaw.exe}.
 
@@ -651,13 +647,13 @@ Next opportunity is to run it through the command line. For Windows and macOS it
 java -jar Sorting-Visualization.jar
 \end{lstlisting}
 
-Just after running the application, the main window(Figure \ref{fig:ui}) shows up and the application is ready to use.
+Just after running the application, the main window (Figure \ref{fig:ui}) shows up and the application is ready to use.
 
 \subsection{User interface}
 
 As it was stated above, the main aim of the application is to be as much user-friendly as possible. This part describes the user interface of the application.
 
-Main window (Figure \ref{fig:ui}) consists of the visualization panel(1), information panel(2), control panel(3) and upper panel(4).
+Main window (Figure \ref{fig:ui}) consists of the visualization panel (1), information panel (2), control panel (3) and upper panel (4).
 
 \begin{figure}[H]
 \begin{center}
@@ -668,7 +664,7 @@ Main window (Figure \ref{fig:ui}) consists of the visualization panel(1), inform
 \end{figure}
 
 \subsubsection{Visualization panel}
-Visualization panel(Figure \ref{fig:vispanel}) is the main space for the visualization of algorithms. It shows different types of nodes which represent array items. Animated movements of these nodes show individual steps of a sorting algorithm. 
+Visualization panel (Figure \ref{fig:vispanel}) is the main space for the visualization of algorithms. It shows different types of nodes which represent array items. Animated movements of these nodes show individual steps of a sorting algorithm. 
 
 For some algorithms, there is a description of the node colors available. It is located in the bottom left corner.
 
@@ -697,7 +693,7 @@ Buttons and other interactive elements on the panel (Figure \ref{fig:controls}, 
 
 \subsubsection{Information panel}
 
-The information panel(Figure \ref{fig:infopanel}) is located on the right side of the window. It consists of the header with the name of the current algorithm, the pseudocode of the selected algorithm and description of the current state.
+The information panel (Figure \ref{fig:infopanel}) is located on the right side of the window. It consists of the header with the name of the current algorithm, the pseudocode of the selected algorithm and description of the current state.
 
 During the run of the visualization, this information is dynamically updated according to the current algorithm. Application synchronously highlights used lines of code and updates the current state line showing the current state of the algorithm and some values of used variables.
 
@@ -734,15 +730,11 @@ To start a new visualization, there are some options. You may either start it by
 \end{center}
 \end{figure}
 
-To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window(Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma. The input field accepts numbers from range 0 - 99, except a pair of algorithms. Counting Sort has range 0 - 9 and Radix Sort accepts numbers from range 0 - 9999. 
+To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window (Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma. The input field accepts numbers from range 0 - 99, except a pair of algorithms. Counting Sort has range 0 - 9 and Radix Sort accepts numbers from range 0 - 9999. 
 
 \subsubsection{Visualization control}
 
-After setting up a new visualization, it is easy to control sorting visualization flow.
-
-To run sorting visualization click on the "Play" button or press \textbf{R} key. "Play" button may not be available in case visualization is already running or is finished. Also, "Play" button resumes sorting process after it was paused.
-
-The process is paused by pressing "Pause" button.
+After setting up a new visualization, it is easy to control sorting visualization flow. To run sorting visualization click on the "Play" button or press \textbf{R} key. "Play" button may not be available in case visualization is already running or is finished. Also, "Play" button resumes sorting process after it was paused. The process is paused by pressing "Pause" button.
 
 Stepping through the sorting process is performed by two buttons. Step back action is done by clicking the "Step Back" button, which is to the left of the "Play" button. Step forth is made by clicking the "Step Forth" button, which is to the right of the "Pause" button. Both actions are not possible during sorting is running.
 
@@ -752,7 +744,7 @@ Finally, the application allows for changing the speed of visualization. By defa
 
 \subsubsection{Information about the application}
 
-To display a window with information about the application(Figure \ref{fig:about}) click the "About" button on the upper panel or press \textbf{F1} key.
+To display a window with information about the application (Figure \ref{fig:about}) click the "About" button on the upper panel or press \textbf{F1} key.
 
 \begin{figure}[H]
 \begin{center}
@@ -763,7 +755,7 @@ To display a window with information about the application(Figure \ref{fig:about
 
 \subsubsection{Opening description}
 
-There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F2}. Then a window with the short description will show up(Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
+There is a short description for each algorithm. To show information click "Info" button on the control panel or press \textbf{F2}. Then a window with the short description will show up (Figure \ref{fig:desc}). To close the window use standard close button or press \textbf{Esc}.
 
 \begin{figure}[H]
 \begin{center}
@@ -816,24 +808,20 @@ Keyboard shortcuts for Windows and macOS.
 %% \documentclass, výchozí český) se zadává použitím makra s uvedením
 %% jazyka jako nepovinného parametru.
 \begin{kiconclusions}[czech]
-Pro bakalářskou práci býl vytvořen software pro podporu výuky třídících algoritmů pomocí vizualizace průběhu třídění nejznámějšími algoritmy. Aplikace dovoluje krokování vypočtu dopředu a dozadu pro každý reprezentovaný algoritmus. Existuje možnost spustit vizualizaci na zadaném či vygenerovaném vstupním poli. Při běhu vizualizace se zobrazují pseudokód použitého algoritmu, aktuální hodnoty některých proměnných a stav průběhu.
+Pro bakalářskou práci byl vytvořen software pro podporu výuky třídících algoritmů pomocí vizualizace průběhu třídění nejznámějšími algoritmy. Aplikace dovoluje krokování vypočtu dopředu a dozadu pro každý reprezentovaný algoritmus. Je možné spustit vizualizaci na zadaném či vygenerovaném vstupním poli. Při běhu vizualizace se zobrazují pseudokód použitého algoritmu a aktuální hodnoty některých proměnných.
 
-Snažil jsem se vytvořit kvalitní software ze snadno ovladatelným uživatelským rozhraním, které by býlo použitelné pro přednášející, cvičící a studenty.
-
-Možným vylepšením aplikace by mohlo být rozšíření o další algoritmy.
+Snažil jsem se vytvořit kvalitní software ze snadno ovladatelným uživatelským rozhraním, které by býlo použitelné pro přednášející, cvičící a studenty. Možným vylepšením aplikace by mohlo být rozšíření o další algoritmy.
 
 První část textu bakalářské práce je teoretická. Zaměřuje se na obecný popis algoritmů, jejích vlastnosti a popis třídících algoritmů použitých v aplikaci. Druhá část popisuje samostatnou aplikaci. 
 
 \end{kiconclusions}
 
 \begin{kiconclusions}[english]
-As the main goal of this bachelor thesis, there was created the teaching support application which visualizes a flow of the most known sorting algorithms. The application allows stepping frontward and backward through each represented algorithm. User may run sorting on a random or custom array. During the demonstration run, the application visualizes a pseudocode flow and current information about variables and state.
+As the main goal of this bachelor thesis, there was created the teaching support application which visualizes the most known sorting algorithms. The application allows stepping forward and backward through each represented algorithm. User may run sorting on a random or custom array. During the demonstration run, the application visualizes pseudocode and current information about some variables.
 
-I tried to create high-quality software with a user-friendly and easy-to-use interface, which could be used by lecturers, tutors, and students.
+I tried to create high-quality software with a user-friendly and easy-to-use interface, which could be used by lecturers, tutors, and students. Possible next improvement of the applications is extension it by other algorithms.
 
-Possible next improvement of the applications is extension it by other algorithms.
-
-The first half of the thesis text is more theoretical. It tells about algorithms in general and the algorithms represented in the application. The second half is focused on the application itself.
+The first part of the thesis text is more theoretical. It tells about algorithms in general and the algorithms represented in the application. The second part is focused on the application itself.
 \end{kiconclusions}
 
 %% Přílohy obsahu textu práce, za makrem \appendix.
