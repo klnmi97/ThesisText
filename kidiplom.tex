@@ -239,7 +239,7 @@ As an example, we will consider the algorithm for finding factorial representing
 
 \subsection{Types of algorithms}
 
-Nowadays there exists a large number of different algorithms. They are divided into different groups by different criteria. Often one algorithm may belong to several groups. Here are some of them \cite{cormen}.
+Nowadays there exist a large number of different algorithms. They are divided into different groups by different criteria. Often one algorithm may belong to several groups. Here are some of them \cite{cormen}.
 
 \begin{itemize}
 	\item \textit{Recursive algorithms} -- algorithms that call itself until the limiting condition is reached.
@@ -316,7 +316,7 @@ Sorting algorithms are divided into two main types \citep{alm2}:
 	\item \textit{Algorithms of external sorting} -- all the data to sort is stored outside the internal memory (e.g. on a hard disk). These algorithms usually combine sorting in the internal memory, merging of sorted parts and saving them to the external memory.
 \end{enumerate}
 
-In the text we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used and algorithms which use these techniques and are included in the software \cite{knuth3}:
+In the text we are talking only about the algorithms of internal sorting. Here are five main techniques which are usually used with the algorithms which use these techniques and are included in the software \cite{knuth3}:
 \begin{enumerate}
 	\item \textit{Sorting by Insertion} -- single items from the sequence are put into the right place of the sorted part. Here belongs \hyperref[sec:insertion]{Insertion Sort}.
 	\item \textit{Sorting by Exchanging} -- swap elements of each pair that are out of order till no more such pairs exist. Here we have \hyperref[sec:bubble]{Bubble Sort}, \hyperref[sec:cocktailsort]{Cocktail Sort}, \hyperref[sec:quicksort]{Quick Sort}.
@@ -332,7 +332,7 @@ This section describes algorithms included in the program. \cite{cormen}, \citep
 
 \subsection{Insertion Sort}
 \label{sec:insertion}
-Insertion Sort algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element. Then, for each item that we have in the unsorted part, we take element and insert it into the right place among the sorted items.
+Insertion Sort algorithm has a simple idea. Assume an array with items to be sorted. We divide the array into two parts: sorted one and unsorted one. At the beginning sorted part consists of the first element (Figure \ref{fig:insert}). Then, for each item that we have in the unsorted part, we take element and insert it into the right place among the sorted items.
 
 \begin{figure}[H]
 \begin{center}
@@ -353,7 +353,7 @@ Assume an array of items to sort. At the beginning of the sorting process unsort
 
 \subsection{Bubble Sort}
 \label{sec:bubble}
-Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. The algorithm works stepping through all elements from left to right, so the largest elements tend to move or "bubble" to the right \mbox{(Figure \ref{fig:bubble})}. That is why the algorithm is called Bubble Sort.
+Bubble Sort is based on the idea of exchanging two adjacent elements if they have the wrong order. The algorithm works stepping through all elements from left to right, so the largest elements tend to move or "bubble" to the right \mbox{(Figure \ref{fig:bubble})}. That is why the algorithm is called Bubble Sort.
 
 Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items is decreased by one till only two elements left. After this two elements are compared and possibly swapped, the array is considered as sorted. Bubble Sort complexity is $\Theta(n^2)$.
 
@@ -389,7 +389,7 @@ For Cocktail Sort, worst case complexity remains $\Theta(n^2)$.
 \label{sec:quicksort}
 Quick Sort works on the principle "divide and conquer". It recursively applies itself on smaller parts of array until it is not sorted.
 
-Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item, also known as pivot, is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements on the right and no smaller elements are on the left.
+Algorithm takes one item at unsorted array or its part, usually it is the leftmost or the rightmost element of array. Then this item, also known as pivot, is moved to its final position in the array that is should occupy. While determining pivot's position, other elements of array are rearranged the way that no bigger elements are on the right and no smaller elements are on the left.
 
 This way, it is enough to apply Quick Sort on each part of array not including pivot until array is not sorted.
 
@@ -403,7 +403,7 @@ This way, it is enough to apply Quick Sort on each part of array not including p
 
 There are several methods of partitioning of array into two parts, here I want to describe one that is demonstrated in the software part of this work.
 
-Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the rightmost item and index is the first. Next, each item of the array except pivot is compared with the pivot. If a current item is less or equal to the pivot, it is swapped with the index item, next in order item becomes an index. Finally, index and pivot are swapped and this way pivot is on its final position.
+Firstly, a pivot and index item are selected on the unsorted array or its part. Assume pivot is the rightmost item and index is the leftmost. Next, each item of the array except pivot is compared with the pivot. If a current item is less or equal to the pivot, it is swapped with the index item, next in order item becomes an index. Finally, index and pivot are swapped and this way pivot is on its final position.
 
 Quick Sort is counted as an effective algorithm because its average complexity is $\Theta(n \log n)$. However, when array is maximally unbalanced it may show worst performance. Worst case complexity is $\Theta(n^2)$.
 
@@ -477,7 +477,7 @@ The Radix sorting algorithm is based on the idea of using separate digits to det
 
 For better understanding let us go to the details. Assume the array of integers. Let $d$ be the number of digits of the largest item from the array. If there are numbers from the array that have less count of digits than the $d$ is, then insufficient digits are counted as digits with zero values.
 
-This way, for each digit from least significant to most we sort the input array according to the current digit (Figure \ref{fig:radixsort}). Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
+This way, for each digit from least significant to most significant, we sort the input array according to the current digit (Figure \ref{fig:radixsort}). Here we use \hyperref[sec:counting]{Counting Sort} or another stable algorithm.
 
 \begin{figure}[H]
 \begin{center}
@@ -492,7 +492,7 @@ This way, for each digit from least significant to most we sort the input array 
 
 Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
-In the beginning, the algorithm creates n intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
+In the beginning, the algorithm creates $n$ intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
 
 \begin{figure}[H]
 \begin{center}
@@ -504,7 +504,7 @@ In the beginning, the algorithm creates n intervals of the same size. For each i
 
 Firstly, Bucket Sort distributes data to buckets. Then, it sorts each non-empty bucket. For this task, we can use, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, the algorithm moves items from each bucket one by one to the output array. 
 
-In case we select Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
+In case we selected Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
 
 
 \newpage
@@ -573,12 +573,12 @@ Program source codes are structured into packages:
 	\end{flushleft}
 \end{figure}
 
-Each package contains certain classes, which are grouped by the purpose of use. Next subsections contain some general descriptions of the classes from packages. 
+Each package contains certain classes, which are grouped by the purpose of use. Next subsections contain some general descriptions of the classes from packages. More detailed descriptions of the class functions are located directly in the source codes.
 \subsubsection{A root package}
 The root package contains only one class. It is MainUI.java. This class serves as the main class which starts the application. Although JavaFX provides the possibility of using XML-based language for creating a user interface, here it is not used. The MainUI class defines main user interface elements and does the instantiating of controllers.
 
 \subsubsection{Constants, Data and Enum packages}
-All these three packages work with data and data structures, although a bit differently. Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program. Data package contains classes which serve as definitions for data objects. \textit{BindingData} class instance holds data for control buttons bindings. Results class defines object that is used for transferring results from the input dialog. Enum package contains one definition of the enum class. \textit{Algorithm} enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
+All these three packages work with data and data structures, although a bit differently. Constants package has only an eponymous class. This class contains final static variables that are used as default values in the program. Data package contains classes which serve as definitions for data objects. \textit{BindingData} class instance holds binding data for the buttons from the control panel. \textit{Results} class defines object that is used for transferring results from the input dialog. Enum package contains one definition of the enum class. \textit{Algorithm} enum defines list of algorithms that are visualized in the program. For example, a list with algorithm names in the main window is generated from this enum.
 
 \subsubsection{Controllers package}
 The package has two Java class files: \textit{AnimationController.java} and \textit{ViewController.java}. The first one is responsible for the control of animations run. And the second one controls the graphic part of the application: creation the right graphic representation of array nodes, control of animation creation, pseudo code creation control. Both are used in the main class.
@@ -588,7 +588,7 @@ NodeControllers package includes \textit{BrickNode.java, ColorInfoManager.java, 
 
 BrickNode class defines kind of representation of the key from the array. After instantiating it can be styled in many ways. This is done by the different node managers. We shall talk about them next. Before moving on, we describe node managers generally. These objects are responsive for creation a visual representation from the given data. Also, they may create some additional graphic items, e.g. buckets for the Bucket Sort. Node managers define animations for the certain types of nodes and define their own metric system for certain type of nodes.
 
-The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages visual nodes whose height depends on their value. Then, there is \textit{FixedNodes} class. This node manager class defines a manager that controls nodes of fixed size. Finally, there is \textit{Tree} node manager. \textit{Tree} represents manager that creates and controls a visual binary heap. 
+The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages visual nodes whose height depends on their value (Figure \ref{fig:1a}). Then, there is \textit{FixedNodes} class. This node manager class defines a manager that controls nodes of fixed size (Figure \ref{fig:1b}). Finally, there is \textit{Tree} node manager. \textit{Tree} represents manager that creates and controls a visual binary heap (Figure \ref{fig:1c}) and corresponding visual array. 
 
 \begin{figure}[H]
 	\begin{subfigure}{0.31\textwidth}
@@ -612,7 +612,7 @@ The first is \textit{DynamicNodes} class. \textit{DynamicNodes} object manages v
 \textit{Pseudocode} class, as it is clear from the title, defines a manager that controls the creation and animating of the pseudocode that appears on the information side panel. \textit{VariablesInfo}, in turn, defines another dynamic part of the information side panel, that shows current details during the visualization process and state of some variables. \textit{ColorInfoManager} represents information about the meaning of single colors of nodes. Usually, a description is shown for the dynamic type of nodes which tend to change their colors.
 
 \subsubsection{UI package}
-UI or user interface package includes different additional classes that define additional parts of the graphic user interface. There are \textit{InfoDialog} which represents dialog that shows short descriptions of individual algorithms. \textit{InputDialog} instance accepts user input data. \textit{Toast} is a help message in Android OS style.
+UI or user interface package includes different additional classes that define additional parts of the graphic user interface. There are \textit{InfoDialog} which represents dialog that shows short descriptions of individual algorithms. \textit{InputDialog} instance accepts user input data. \textit{AboutDialog} shows information about the application. \textit{Toast} is a help message in Android OS\footnote{\href{https://www.android.com/}{Android web site}} style.
 
 \subsubsection{Utilities package}
 The Utilities package contains different kinds of tools. \textit{ArrayUtils} is a supporting tool while working with an array. \textit{DescriptionReader} is a tool for reading algorithm description from a file. \textit{Scaling} class defines a tool that counts the scaling factor to fit different screens.
@@ -642,7 +642,7 @@ Since Java is cross-platform, you may use the application within the most popula
 
 \subsection{Starting application}
 
-Since Java applications are not native applications to the most popular operating systems for PC, you need to have JDK\footnote{\href{https://www.oracle.com/technetwork/java/javase/jdk-8-readme-2095712.html}{Java Development Kit}} or JRE\footnote{\href{https://www.w3schools.in/java-tutorial/jre/}{Java Runtime Environment}} installed and configured. In case it is already done, it is enough to run the file of the application with \textit{.jar} extension as simple application.
+Since Java applications are not native applications to the most popular operating systems for PC\footnote{According to \href{https://netmarketshare.com/operating-system-market-share.aspx}{netmarketshare.com} in May 2019}, you need to have JDK\footnote{\href{https://www.oracle.com/technetwork/java/javase/jdk-8-readme-2095712.html}{Java Development Kit}} or JRE\footnote{\href{https://www.w3schools.in/java-tutorial/jre/}{Java Runtime Environment}} installed and configured. In case it is already done, it is enough to run the file of the application with \textit{.jar} extension as simple application.
 
 Also, it is possible to use option "Open with". Here is necessary to select the right application. For example, in the Windows operating system it is usually "Java(TM) Platform SE binary" or \textit{javaw.exe}.
 
@@ -722,10 +722,10 @@ The upper panel includes selector of the algorithms. To see the list of availabl
 
 \subsection{Interaction}
 
-This section describes possible interactions between user and application.
+This section describes possible interactions between user and the application.
 
 \subsubsection{Starting new visualization}
-To start a new visualization, there are some options. You may either start it by selecting an algorithm from the algorithm selector on the upper panel or click "Reset" to initialize new visualization of the current algorithm with random data. Finally, a user can initialize new visualization with custom data.
+To start a new visualization, there are some options. You may either start it by selecting an algorithm from the algorithm selector on the upper panel or click "Reset" to initialize new visualization of the current algorithm with random data. Finally, you can initialize new visualization with custom data.
 
 \begin{figure}[H]
 \begin{center}
@@ -734,17 +734,17 @@ To start a new visualization, there are some options. You may either start it by
 \end{center}
 \end{figure}
 
-To initialize new visualization with custom data, click the "NEW" button. After it, there appears a window (Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma. The input field accepts numbers from range 0 - 99, except a pair of algorithms. Counting Sort has range 0 - 9 and Radix Sort accepts numbers from range 0 - 9999. 
+To initialize new visualization with custom data, click the "NEW" button on the control panel. After it, there appears a window (Figure \ref{fig:new}). To select an algorithm, choose one from the drop-down list. The input field, which is a line lower, allows a user to enter a sequence of integers. By default, it is filled with randomly generated numbers. For separation of numbers use space or comma. The input field accepts numbers from range 0 - 99, except a pair of algorithms. Counting Sort has range 0 - 9 and Radix Sort accepts numbers from range 0 - 9999. 
 
 \subsubsection{Visualization control}
 
-After setting up a new visualization, it is easy to control sorting visualization flow. To run sorting visualization click on the "Play" button or press \textbf{R} key. "Play" button may not be available in case visualization is already running or is finished. Also, "Play" button resumes sorting process after it was paused. The process is paused by pressing "Pause" button.
+After setting up a new visualization, it is easy to control sorting visualization. To run the visualization click on the "Play" button or press \textbf{R} key. "Play" button may not be available in case visualization is already running or is finished. Also, "Play" button resumes sorting process after it was paused. The process is paused by pressing "Pause" button.
 
 Stepping through the sorting process is performed by two buttons. Step back action is done by clicking the "Step Back" button, which is to the left of the "Play" button. Step forth is made by clicking the "Step Forth" button, which is to the right of the "Pause" button. Both actions are not possible during sorting is running.
 
 In addition, there are buttons that allow go to the beginning and to the end. "Go to start" returns sorting in the initial state. "Go to end" action is intended to fast-forward visualization to the "sorted" state.
 
-Finally, the application allows for changing the speed of visualization. By default, there is an optimal speed for animation flow. To slow down animations, move the knob to the left. To make the visualization run faster, slide knob to the right.
+Finally, the application allows changing the speed of visualization. By default, there is an optimal speed of animation. To slow down animations, move the knob to the left. To make the visualization run faster, slide the knob to the right.
 
 \subsubsection{Information about the application}
 
