@@ -29,7 +29,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6}Merge Sort}{11}{subsection.3.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Heap Sort}{11}{subsection.3.7}% 
+\contentsline {subsection}{\numberline {3.7}Heap Sort}{12}{subsection.3.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.8}Counting Sort}{13}{subsection.3.8}% 
 \defcounter {refsection}{0}\relax 
@@ -37,82 +37,82 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.10}Bucket Sort}{14}{subsection.3.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Documentation}{15}{section.4}% 
+\contentsline {section}{\numberline {4}Documentation}{16}{section.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Used technologies}{15}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.1}Used technologies}{16}{subsection.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Structure overview}{16}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.2}Structure overview}{17}{subsection.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}A root package}{16}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.1}A root package}{17}{subsubsection.4.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Constants, Data and Enum packages}{16}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Constants, Data and Enum packages}{17}{subsubsection.4.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Controllers package}{17}{subsubsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Controllers package}{18}{subsubsection.4.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.4}NodeControllers package}{17}{subsubsection.4.2.4}% 
+\contentsline {subsubsection}{\numberline {4.2.4}NodeControllers package}{18}{subsubsection.4.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.5}UI package}{18}{subsubsection.4.2.5}% 
+\contentsline {subsubsection}{\numberline {4.2.5}UI package}{19}{subsubsection.4.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.6}Utilities package}{18}{subsubsection.4.2.6}% 
+\contentsline {subsubsection}{\numberline {4.2.6}Utilities package}{19}{subsubsection.4.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.7}Algorithms package}{18}{subsubsection.4.2.7}% 
+\contentsline {subsubsection}{\numberline {4.2.7}Algorithms package}{19}{subsubsection.4.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.8}Resources}{18}{subsubsection.4.2.8}% 
+\contentsline {subsubsection}{\numberline {4.2.8}Resources}{19}{subsubsection.4.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}User Guide}{19}{section.5}% 
+\contentsline {section}{\numberline {5}User Guide}{20}{section.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}System requirements}{19}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.1}System requirements}{20}{subsection.5.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Starting application}{19}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.2}Starting application}{20}{subsection.5.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}User interface}{19}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.3}User interface}{20}{subsection.5.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.1}Visualization panel}{20}{subsubsection.5.3.1}% 
+\contentsline {subsubsection}{\numberline {5.3.1}Visualization panel}{21}{subsubsection.5.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.2}Control panel}{21}{subsubsection.5.3.2}% 
+\contentsline {subsubsection}{\numberline {5.3.2}Control panel}{22}{subsubsection.5.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.3}Information panel}{21}{subsubsection.5.3.3}% 
+\contentsline {subsubsection}{\numberline {5.3.3}Information panel}{22}{subsubsection.5.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.3.4}Upper panel}{22}{subsubsection.5.3.4}% 
+\contentsline {subsubsection}{\numberline {5.3.4}Upper panel}{23}{subsubsection.5.3.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Interaction}{22}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.4}Interaction}{23}{subsection.5.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1}Starting new visualization}{22}{subsubsection.5.4.1}% 
+\contentsline {subsubsection}{\numberline {5.4.1}Starting new visualization}{23}{subsubsection.5.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Visualization control}{23}{subsubsection.5.4.2}% 
+\contentsline {subsubsection}{\numberline {5.4.2}Visualization control}{24}{subsubsection.5.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.3}Information about the application}{23}{subsubsection.5.4.3}% 
+\contentsline {subsubsection}{\numberline {5.4.3}Information about the application}{24}{subsubsection.5.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.4}Opening description}{24}{subsubsection.5.4.4}% 
+\contentsline {subsubsection}{\numberline {5.4.4}Opening description}{25}{subsubsection.5.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.5}Escaping application}{24}{subsubsection.5.4.5}% 
+\contentsline {subsubsection}{\numberline {5.4.5}Escaping application}{25}{subsubsection.5.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Keyboard shortcuts}{24}{subsection.5.5}% 
+\contentsline {subsection}{\numberline {5.5}Keyboard shortcuts}{25}{subsection.5.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'av\v er}{25}{section*.25}% 
+\contentsline {section}{Z\'av\v er}{26}{section*.25}% 
 \babel@toc {czech}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{26}{section*.27}% 
+\contentsline {section}{Conclusions}{27}{section*.27}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Contents of enclosed CD/DVD}{27}{appendix.A}% 
+\contentsline {section}{\numberline {A}Contents of enclosed CD/DVD}{28}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Acronyms}{28}{section*.29}% 
+\contentsline {section}{Acronyms}{29}{section*.29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{29}{section*.32}% 
+\contentsline {section}{References}{30}{section*.32}% 
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
-\babel@toc {english}{}
-\babel@toc {english}{}
-\babel@toc {english}{}
-\babel@toc {czech}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {czech}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {czech}{}
 \babel@toc {english}{}

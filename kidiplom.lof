@@ -7,7 +7,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Insertion Sort: sorted and unsorted parts at the beginning\relax }}{8}{figure.caption.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Bubble Sort in progress\relax }}{9}{figure.caption.7}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Bubble Sort: one pass through the array\relax }}{9}{figure.caption.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Quick Sort principle\relax }}{10}{figure.caption.8}% 
 \defcounter {refsection}{0}\relax 
@@ -21,23 +21,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {10}{\ignorespaces Bucket Sort principle\relax }}{14}{figure.caption.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Node types\relax }}{17}{figure.caption.15}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Node types\relax }}{18}{figure.caption.15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Main window\relax }}{20}{figure.caption.16}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces Main window\relax }}{21}{figure.caption.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces Visualization panel\relax }}{20}{figure.caption.17}% 
+\contentsline {figure}{\numberline {13}{\ignorespaces Visualization panel\relax }}{21}{figure.caption.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Control panel\relax }}{21}{figure.caption.18}% 
+\contentsline {figure}{\numberline {14}{\ignorespaces Control panel\relax }}{22}{figure.caption.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces Information panel\relax }}{21}{figure.caption.19}% 
+\contentsline {figure}{\numberline {15}{\ignorespaces Information panel\relax }}{22}{figure.caption.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces Algorithm selector\relax }}{22}{figure.caption.20}% 
+\contentsline {figure}{\numberline {16}{\ignorespaces Algorithm selector\relax }}{23}{figure.caption.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces Window "New sorting"\relax }}{22}{figure.caption.21}% 
+\contentsline {figure}{\numberline {17}{\ignorespaces Window "New sorting"\relax }}{23}{figure.caption.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {18}{\ignorespaces Window "About"\relax }}{23}{figure.caption.22}% 
+\contentsline {figure}{\numberline {18}{\ignorespaces Window "About"\relax }}{24}{figure.caption.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {19}{\ignorespaces Window "Description window"\relax }}{24}{figure.caption.23}% 
+\contentsline {figure}{\numberline {19}{\ignorespaces Window "Description"\relax }}{25}{figure.caption.23}% 
 \babel@toc {czech}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
@@ -52,7 +52,7 @@
 \babel@toc {english}{}
 \babel@toc {english}{}
 \babel@toc {english}{}
+\babel@toc {english}{}
+\babel@toc {english}{}
 \babel@toc {czech}{}
-\babel@toc {english}{}
-\babel@toc {english}{}
 \babel@toc {english}{}

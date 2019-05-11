@@ -267,9 +267,9 @@ To be more clear, let us have an example. $f(n) = 5n^3 + 10n^2 + 20n + 4$, the h
 For such approximations there exist different notations \cite{knuth1}, \cite{sipser}:
 
 \begin{enumerate}
-	\item \textit{Asymptotic upper bound} (or Big O notation). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. It represents a worst-case complexity. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$ (Figure \ref{fig:big-omega}).
-	\item \textit{Asymptotic lower bound} (or Big Omega notation). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. It represents the best-case complexity. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
-	\item \textit{Asymptotic tight bound} (or Big Theta notation). This notation combines both lower and upper bounds. This way, it shows an average-case complexity.
+	\item \textit{Asymptotic upper bound} (or Big O notation). For the function $f(n)$ with an input size of $n$, $O(f(n))$ means that the running time or complexity of an algorithm grows as much as the $f(n)$ but may grow more slowly. Sometimes we may write $f(n) = O(g(n))$. To be more precise, it means that there exists some constant $c > 0$ such that $f(n) \leq c * g(n)$ for some large enough $n$ (Figure \ref{fig:big-omega}).
+	\item \textit{Asymptotic lower bound} (or Big $\Omega$\footnote{Omega} notation). If the complexity of some algorithm is in $\Omega(f(n))$, it means that there exists some large enough $n$ such that the function $f(n)$ is a lower bound for the algorithm running time. $f(n) = \Omega(g(n))$ means that there exists some constant $c > 0$ such that $c * g(n) \leq f(n)$ for some large enough $n$.
+	\item \textit{Asymptotic tight bound} (or Big $\Theta$\footnote{Theta} notation). This notation combines both lower and upper bounds.
 \end{enumerate}
 
 All the functions that we have here we will assume to take only non-negative values. Also, there is a \textit{small o} notation. It slightly differs from the \textit{Big O} notation. "Big-O notation says that one function is asymptotically no more than  another. To say that one  function is asymptotically less than another we use small-o notation."\cite{sipser}
@@ -328,7 +328,7 @@ In the text we are talking only about the algorithms of internal sorting. Here a
 \newpage
 \section{Sorting algorithms}
 
-This section describes algorithms represented in the program.
+This section describes algorithms included in the program. \cite{cormen}, \citep{alm2}, \cite{knuth3}, \cite{sedgewik} and \cite{geeks} served as sources of information for this section.
 
 \subsection{Insertion Sort}
 \label{sec:insertion}
@@ -353,17 +353,15 @@ Assume an array of items to sort. At the beginning of the sorting process unsort
 
 \subsection{Bubble Sort}
 \label{sec:bubble}
-Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. The algorithm works stepping through all elements from left to right, so the largest elements tend to move or "bubble" to the right. That is why the algorithm is called Bubble Sort.
+Bubble Sort is based on the idea of exchanging two adjacent elements if they have wrong order. The algorithm works stepping through all elements from left to right, so the largest elements tend to move or "bubble" to the right \mbox{(Figure \ref{fig:bubble})}. That is why the algorithm is called Bubble Sort.
 
-Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items is decreased by one till only two elements left. After this two elements are compared and possibly swapped, the array is considered as sorted.
-
-Bubble Sort complexity is $\Theta(n^2)$.
+Now we are going to the details. Let us have an unsorted array. The algorithm does iterations through the unsorted part which is the whole array at the beginning. And with each iteration through the array the range of inspected items is decreased by one till only two elements left. After this two elements are compared and possibly swapped, the array is considered as sorted. Bubble Sort complexity is $\Theta(n^2)$.
 
 \begin{figure}[H]
 \begin{center}
 	
-	\includegraphics[scale=0.7]{img/Bubblesort.png}
-	\caption{Bubble Sort in progress}\label{fig:bubble}
+	\includegraphics[scale=0.39]{img/Bubblesort.png}
+	\caption{Bubble Sort: one pass through the array}\label{fig:bubble}
 \end{center}
 \end{figure}
 
@@ -385,7 +383,7 @@ The way the algorithm works:
  \item Repeat steps 1. and 2. but with a bit different range from $a = a + 1$ to $b = b - 1$
 \end{enumerate}
 
-For Cocktail Sort worst case complexity remains $\Theta(n^2)$.
+For Cocktail Sort, worst case complexity remains $\Theta(n^2)$.
 
 \subsection{Quick Sort}
 \label{sec:quicksort}
@@ -439,12 +437,12 @@ Binary heap is a complete binary tree; it means that all levels of tree, except 
 \end{center}
 \end{figure}
 
-Binary heap may be implemented by simple array. Item at position zero is a root node, items at position one and two are respectively left and right children of the root. From that representation it is easy to find children of each node (if they exist). Assume a node at position $k$ then its left child is at $2k + 1$ and its right child is at $2k + 2$.
+Binary heap may be implemented by simple array. Item at position zero is a root node, items at position one and two are respectively left and right children of the root. From that representation it is easy to find children of each node (if they exist). Assume a node at position $k$ then its left child is at $2k + 1$ and its right child is at $2k + 2$ (Figure \ref{fig:heapsort}).
 
 \begin{figure}[H]
 \begin{center}
 	
-	\includegraphics[scale=3]{img/Heapsort.png}
+	\includegraphics[scale=0.5]{img/Heapsort.png}
 	\caption{Children positions in heap}\label{fig:heapsort}
 \end{center}
 \end{figure}
@@ -496,10 +494,6 @@ Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in
 
 In the beginning, the algorithm creates n intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
 
-Firstly, Bucket Sort distributes data to buckets. Then, it sorts each non-empty bucket. For this task, we can use, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, the algorithm moves items from each bucket one by one to the output array. 
-
-In case we select Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
-
 \begin{figure}[H]
 \begin{center}
 	
@@ -507,6 +501,11 @@ In case we select Insertion Sort as the algorithm for sorting buckets, the worst
 	\caption{Bucket Sort principle}\label{fig:bucketsort}
 \end{center}
 \end{figure}
+
+Firstly, Bucket Sort distributes data to buckets. Then, it sorts each non-empty bucket. For this task, we can use, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, the algorithm moves items from each bucket one by one to the output array. 
+
+In case we select Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
+
 
 \newpage
 \section{Documentation}
@@ -519,7 +518,7 @@ Nowadays there are a lot of programming languages, libraries, frameworks. On the
 
 The main programming language of the thesis software is Java\footnote{\href{https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}{Java}}. To be more precise, Java Platform, Standard Edition 8. Java is a cross-platform, object-oriented language. Its motto is "write once, run anywhere". It means that compiled java application runs on all platforms, that are supported by Java. Java applications are compiled to the kind of bytecode and may be running on the \Gls{JVM}\footnote{\href{https://www.geeksforgeeks.org/jvm-works-jvm-architecture/}{What is JVM}} regardless of the platform. 
 
-As for the visual side of the application, Java provides a good JavaFX\footnote{\href{https://docs.oracle.com/javase/8/javafx/get-started-tutorial/jfx-overview.htm}{JavaFX overview}} library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS}\footnote{\href{https://www.w3schools.com/css/default.asp}{About CSS}} for styling some elements of the user interface.
+As for the visual side of the application, Java provides a good JavaFX\footnote{\href{https://docs.oracle.com/javase/8/javafx/get-started-tutorial/jfx-overview.htm}{JavaFX}} library which is enough for the purpose. Here JavaFX was used both for the user interface and algorithms visualization. Also, JavaFX provides the possibility of using \Gls{CSS}. The visualization software uses \Gls{CSS}\footnote{\href{https://www.w3schools.com/css/default.asp}{About CSS}} for styling some elements of the user interface.
 
 The project was created and developed in the NetBeans IDE, although you may use other IDEs that support importing the NetBeans projects. It was developed under the Windows operating system and was tested with different resolutions and on the macOS. A version control system Git\footnote{\href{https://git-scm.com/}{Learn and download Git}} in connection with the GitHub was used. All the working steps of the project you may follow on \href{https://github.com/klnmi97/Sorting-Visualization}{the GitHub website}.
 
@@ -765,7 +764,7 @@ There is a short description for each algorithm. To show information click "Info
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[scale=0.7]{img/ui/WindowDescription.png}
-	\caption{Window "Description window"}\label{fig:desc}
+	\caption{Window "Description"}\label{fig:desc}
 \end{center}
 \end{figure}
 
@@ -775,7 +774,7 @@ Close application by clicking exit button. Its location depends on the operating
 
 \subsection{Keyboard shortcuts}
 
-Keyboard shortcuts for Windows and macOS.
+Keyboard shortcuts for Windows and macOS are in the table \ref{tab:keyboard}.
 
 \begin{table}[H]
 	\centering

@@ -2020,6 +2020,11 @@
     <bcf:citekey order="11">cormen</bcf:citekey>
     <bcf:citekey order="12">alm2</bcf:citekey>
     <bcf:citekey order="13">knuth3</bcf:citekey>
+    <bcf:citekey order="14">cormen</bcf:citekey>
+    <bcf:citekey order="15">alm2</bcf:citekey>
+    <bcf:citekey order="16">knuth3</bcf:citekey>
+    <bcf:citekey order="17">sedgewik</bcf:citekey>
+    <bcf:citekey order="18">geeks</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
