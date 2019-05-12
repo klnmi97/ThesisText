@@ -323,9 +323,9 @@ In the text we are talking only about the algorithms of internal sorting. Here a
 \end{enumerate}
 
 \newpage
-\section{Sorting algorithms}
+\section{Sorting algorithms included}
 
-This section describes algorithms included in the program. \cite{cormen}, \citep{alm2}, \cite{knuth3}, \cite{sedgewik} and \cite{geeks} served as sources of information for this section.
+This section describes algorithms included to the software. \cite{cormen}, \citep{alm2}, \cite{knuth3}, \cite{sedgewik} and \cite{geeks} served as sources of information for this section.
 
 \subsection{Insertion Sort}
 \label{sec:insertion}
@@ -448,13 +448,13 @@ Binary heap may be implemented by simple array. Item at position zero is a root 
 \begin{enumerate}
  \item \label{itm:step1} Build max-heap
  \item \label{itm:step2} Swap root and the last node, reduce size of heap by one
- \item \label{itm:step3} Build max-heap without the nodes on a reduced position
+ \item \label{itm:step3} Build max-heap without the nodes on reduced positions
  \item Repeat steps \ref{itm:step2} and \ref{itm:step3} until the range of array is one
 \end{enumerate}
 
 To build \textit{max-heap} from current node we need to assure that right and left children comprise max-heaps. This way, in the first step procedure for building max-heap is recursively applied for each node that has at least one child from bottom to top.
 
-After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array. Worst and average case complexity of Heap Sort are both $\bm{\Theta(n \log(n))}$.
+After each swap of the root node and the node at last considered position, the last node takes its final place. This way it joins the sorted part of an array. Worst and average case complexity of Heap Sort are both $\Theta(n \log(n))$.
 
 \subsection{Counting Sort} 
 \label{sec:counting}
@@ -484,25 +484,27 @@ This way, for each digit from least significant to most significant, we sort the
 \end{center}
 \end{figure}
 
+The complexity of Radix Sort depends on three parameters. Assume we have the array of size $n$ with $d$ digits from $0$ to $k$. If the complexity of the used stable algorithm is $\Theta(n + k)$, the complexity of Radix Sort is $\Theta(d(n + k))$. 
+
 \subsection{Bucket Sort}
 \label{sec:bucketsort}
+
+
+\begin{figure}[H]
+\begin{center}
+	
+	\includegraphics[scale=0.25]{img/Bucketsort.png}
+	\caption{Bucket Sort principle}\label{fig:bucketsort}
+\end{center}
+\end{figure}
 
 Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
 In the beginning, the algorithm creates $n$ intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
 
-\begin{figure}[H]
-\begin{center}
-	
-	\includegraphics[scale=0.3]{img/Bucketsort.png}
-	\caption{Bucket Sort principle}\label{fig:bucketsort}
-\end{center}
-\end{figure}
-
 Firstly, Bucket Sort distributes data to buckets. Then, it sorts each non-empty bucket. For this task, we can use, for example, \hyperref[sec:insertion]{Insertion Sort}. Finally, the algorithm moves items from each bucket one by one to the output array. 
 
 In case we selected Insertion Sort as the algorithm for sorting buckets, the worst case complexity for Bucket Sort is $\Theta(n^2)$. However, the average case complexity is $\Theta(n)$.
-
 
 \newpage
 \section{Documentation}

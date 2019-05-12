@@ -15,7 +15,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Sorting}{6}{subsection.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Sorting algorithms}{8}{section.3}% 
+\contentsline {section}{\numberline {3}Sorting algorithms included}{8}{section.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Insertion Sort}{8}{subsection.3.1}% 
 \defcounter {refsection}{0}\relax 
