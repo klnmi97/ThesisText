@@ -489,6 +489,7 @@ The complexity of Radix Sort depends on three parameters. Assume we have the arr
 \subsection{Bucket Sort}
 \label{sec:bucketsort}
 
+Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
 \begin{figure}[H]
 \begin{center}
@@ -497,8 +498,6 @@ The complexity of Radix Sort depends on three parameters. Assume we have the arr
 	\caption{Bucket Sort principle}\label{fig:bucketsort}
 \end{center}
 \end{figure}
-
-Bucket Sort, as well as \hyperref[sec:counting]{Counting Sort}, requires data in a known range with a uniform distribution over this range.
 
 In the beginning, the algorithm creates $n$ intervals of the same size. For each interval, it creates a dynamic structure which will hold items from the input. These dynamic structures are called buckets.
 
